@@ -21,12 +21,32 @@ Game Shelf is a site that hopes to provide easily accessible reviews and details
 
 ## Description
 
-## UX
-## Strategy
+## User Experience (UX)
 
-**Business Goals**
+-   ### User stories
+
+    -   #### First Time Visitor Goals
+
+        1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the 
+        2. As a First Time Visitory, I want to be able to easily navigate the site to find content.
+                       
+    -   #### Returning Visitor Goals
+
+        1. As a Returning Visitor, I want to find information about games I may want to play
+        2. As a Returning Visitor, I want to share my reviews of games I have played
+           
+
+    -   #### Frequent User Goals
+
+        1. As a Frequent User, I want to check to see if there are any new reviews or new games added.
+        2. As a Frequent User, I want to organise the games I own on my profile.
+
+    -   #### Site Owner Goals
+
+        1. As a Site Owner, I want to earn money on games purchased through affiliate links
     
-**User Stories**
+        
+
  
 ## Scope
 
