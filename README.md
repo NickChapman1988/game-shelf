@@ -1,104 +1,150 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Game Shelf
+### View the live project [here.](https://nick-game-shelf.herokuapp.com/)
 
-Welcome NickChapman1988,
+Game Shelf is a site that hopes to provide easily accessible reviews and details of tabletop board games. The site will be targeted towards existing tabletop board game players and collectors who are looking for new games to play and collect, but also aimed at new gamers who may not know where to start. Game Shelf will be useful for gamers to find detailed reviews of games they may be interested in, and allow them to find all the necessary details of games.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
 
-## Gitpod Reminders
+## Table of Contents
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+> -	[Overview](#overview)
+> -	[Description](#description)
+> -	[UX](#ux)
+> -	[Features](#features)
+> -	[Technologies Used](#technologies-used)
+> -	[Testing](#testing)
+> -	[Project bugs and solutions](#project-bugs-and-solutions)
+> - [Deployment](#deployment)
+> -	[Credits](#credits)
+> - [Acknowledgements](#acknowledgements)
 
-`python3 -m http.server`
+## Overview
 
-A blue button should appear to click: _Make Public_,
+## Description
 
-Another blue button should appear to click: _Open Browser_.
+## UX
+## Strategy
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+**Business Goals**
+    
+**User Stories**
+ 
+## Scope
 
-A blue button should appear to click: _Make Public_,
+## Structure
 
-Another blue button should appear to click: _Open Browser_.
+## Skeleton
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Surface
 
-To log into the Heroku toolbelt CLI:
+### Images
+### Colours
+### Typography
+### Icons
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Features
 
-------
+### Existing Features
 
-## Release History
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Features Left to Implement
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Technologies Used
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+#### Languages:
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [CSS](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+#### Libraries:
+* [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Version Control:
+* [Github](https://github.com/) - Used to store the code 
+* [Gitpod](https://gitpod.io/) - Used as the primary version control IDE for development to further push and commit code to GitHub.
+* [Heroku](https://www.heroku.com/home) - Used to deploy the live site
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+#### Other:
+* [Code Institute Course Content](https://courses.codeinstitute.net/) - Primary source of learning code.
 
 ---
 
-Happy coding!
+## Testing
+
+#### Validation
+
+#### Project Bugs and Solutions
+
+#### Testing User Stories
+
+## Deployment
+
+### GitHub
+
+* Go to [GitHub](https://github.com/) and sign in, or sign up for an account.
+* Once a Github account was created, I opened a new repository by clicking the green button "new". To create this project, I used the Code Institute's student 
+[template](https://github.com/Code-Institute-Org/gitpod-full-template).
+* Click on the green "gitpod" button to open [Gitpod](https://gitpod.io/), a cloud-based version control software or IDE, which was used to write all code for this project.
+* It was then pushed or saved in the terminal to Github where it is stored in a [repository](https://github.com/NickChapman1988/game-shelf)
+
+### Heroku
+
+The project was deployed to Heroku using the following steps:
+
+1. Create a "requirements.txt" file using the `pip3 freeze --local > requirements.txt` command.
+2. Create a Profile using the `echo web: python app.py > Procfile` command.
+3. Delete the blank line at the bottom of the Procfile, as this can sometimes cause problems when running the app on Heroku.
+4. Add, commit and push these new files to GitHub.
+5. Navigate to [Heroku](https://www.heroku.com/home) and log in to the dashboard.
+6. Click "Create a New App".
+7. Enter a unique app name and select the closest region ('Europe' in my case).
+8. Click "Create App".
+9. Under 'Deployment Method' click GitHub.
+10. Once the GitHub profile is displayed, add the GitHub repository name then click "Search".
+11. Once the repository is found, click to connect to the app.
+12. As the environment variables are hidden in an env.py file, these need to be added to the Config Vars in Heroku
+13. Go to the 'Settings' tab for the app, then click on "Reveal Config Vars" and enter the key:value pairs from the env.py file. 
+14. Back in the 'Deploy' tab, click "Enable Automatic Deployment" then below that, make sure the main branch is selected and click "Deploy Branch" 
+15. Once the app has successfully deployed, click "View" to launch the app.
+
+### Forking the GitHub Repository
+
+Forking the GitHub repository creates a copy of the original repository on your own GitHub account to view and/or make changes without affecting the original repository; use the following steps to fork:
+
+1. Log in to GitHub and locate the GitHub [repository](https://github.com/NickChapman1988/game-shelf)
+2. At the top of the repository above the "Settings" button on the menu, locate the "Fork" button.
+3. You should now have a copy of the repository in your own GitHub account.
+
+### Making a local Clone
+
+1. Log in to GitHub and locate the GitHub [repository](https://github.com/NickChapman1988/game-shelf)
+2. At the top of the repository, click the "Code" button (next to the green "Gitpod" button)
+3. Under "Clone with HTTPS", copy the URL provided
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
+
+7. Press Enter. Your local clone will be created.
+
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+
+Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+## Credits
+
+## Acknowledgements
+
