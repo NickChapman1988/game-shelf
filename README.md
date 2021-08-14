@@ -18,8 +18,11 @@ Game Shelf is a site that hopes to provide easily accessible reviews and details
 > - [Acknowledgements](#acknowledgements)
 
 ## Overview
+Tabletop gaming is taking the world by storm right now, and the board games industry is booming. There are now literally hundreds of games being published every year, and there has never been a better time to be a gamer, or to get involved. But it can be a minefield to negotiate and find the *right* games, whether you're a seasoned board gamer or complete newcomer. **_Game Shelf_** aims to provide accurate and comprehensive board game information and reviews that are easily accessible to everyone, and make choosing your next (or first!) board game as straightforward as possible.
+
 
 ## Description
+**_Game Shelf_** is a board games review site built with a mobile-first design, but intended to be accessible on all devices. My aim with the project is to present the most relevant information alongside easily digestible reviews to enable users to quickly and easily decide which games to play next.
 
 ## User Experience (UX)
 
