@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Game Catalogue</h2>
-
     {% for game in catalogue %}
         {{ game.game_title }}<br>
         {{ game.game_description }}<br>
