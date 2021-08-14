@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Shelf</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Game Catalogue</h2>
+
     {% for game in catalogue %}
         {{ game.game_title }}<br>
         {{ game.game_description }}<br>
@@ -17,7 +13,8 @@
         {{ game.designer }}<br>
         {{ game.artist }}<br>
         {{ game.publisher }}<br>
-        <img src="{{ game.image_url }}">
+        <img src="{{ game.image_url }}"><br>
+        <hr>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
