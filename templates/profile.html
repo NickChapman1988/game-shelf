@@ -10,20 +10,20 @@
         </div>
     </div>
 </div>
-
+<h4 class="left-align deep-purple-text">{{username}}'s Reviews</h4>
 <ul class="collapsible">
+    {% for review in reviews %}
     <li>
-        <div class="collapsible-header deep-purple white-text text-shadow"><i class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        <div class="collapsible-header deep-purple white-text text-shadow">
+            <i class="fas fa-caret-down"></i>
+            <strong>{{ review.game_title }}</strong>
+        </div>
+        <div class="collapsible-body">
+            <p><em>Written on {{ review.date_created.date() }}</em></p>
+            <span>{{ review.review_text }}</span>
+        </div>
     </li>
-    <li>
-        <div class="collapsible-header deep-purple white-text text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header deep-purple white-text text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+    {% endfor %}
 </ul>
 
 {% endblock %}
