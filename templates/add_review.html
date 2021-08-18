@@ -5,20 +5,39 @@
         Add Review
     </h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-scroll prefix deep-purple-text"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix">Title</label>
+                    <input id="game_title" type="text" name="game_title" class="autocomplete validate" required>
+                    <label for="game_title">Game Title</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pen prefix deep-purple-text"></i>
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Review</label>
+                    <textarea id="review_text" name="review_text" class="materialize-textarea" class="validate" required></textarea>
+                    <label for="review_text">Review</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-star-half-alt prefix deep-purple-text"></i>
+                    <select id="game_rating" name="game_rating">
+                        <option value="" disabled selected>Choose your rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label for="game_rating">Rate this game between 1 and 10!</label>
                 </div>
             </div>
         </form>
