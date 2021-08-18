@@ -10,6 +10,8 @@
         </div>
     </div>
 </div>
+<a href="{{ url_for('add_review') }}" class="btn-large deep-purple">Add Review</a>
+
 <h4 class="left-align deep-purple-text">{{username}}'s Reviews</h4>
 <ul class="collapsible">
     {% for review in reviews %}
