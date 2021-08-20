@@ -133,14 +133,21 @@ def edit_review(review_id):
             "date_created": datetime.now(),
             "game_rating": request.form.get("game_rating")
         }
-        mongo.db.reviews.update({"id": ObjectId(review_id)}, submit)
-        flash("Review Updated Successfully")
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        flash("Review Successfully Updated")
         return redirect(url_for('profile', username=session['user']))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
 
     titles = mongo.db.catalogue.find().sort("game_title", 1)
     return render_template("edit_review.html", review=review, titles=titles)
+
+
+@app.route("/delete_review/<review_id>")
+def delete_review(review_id):
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
+    flash("Task Successfully Deleted")
+    return redirect(url_for('profile', username=session['user']))
 
 
 if __name__ == "__main__":
