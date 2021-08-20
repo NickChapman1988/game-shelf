@@ -21,7 +21,7 @@
             <strong>{{ review.game_title }}</strong>
         </div>
         <div class="collapsible-body">
-            <p><em>Written on {{ review.date_created.date() }}</em></p>
+            <p><em>Written on {{ review.date_created.strftime("%B %d, %Y") }}</em></p>
             <span>{{ review.review_text }}</span>
         </div>
     </li>
