@@ -17,11 +17,15 @@ $(document).ready(function(){
 
 validateMaterializeSelect();
 function validateMaterializeSelect() {
+    // Sets border colours to match Materialize validate styling //
     let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
     let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+
+    // Change 'required' elements to block display
     if ($("select.validate").prop("required")) {
         $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
     }
+    // Select 'validate' styling based on user selection
     $(".select-wrapper input.select-dropdown").on("focusin", function () {
         $(this).parent(".select-wrapper").on("change", function () {
             if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
