@@ -117,7 +117,7 @@ def add_review():
         }
         mongo.db.reviews.insert_one(review)
         flash("Review Added")
-        return redirect(url_for("get_catalogue"))
+        return redirect(url_for('profile', username=session['user']))
 
     titles = mongo.db.catalogue.find().sort("game_title", 1)
     return render_template("add_review.html", titles=titles)
