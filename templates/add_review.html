@@ -10,10 +10,24 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-scroll prefix deep-purple-text"></i>
+                    <select id="game_title" name="game_title" class="validate" required>
+                        <option value="" disabled selected>Choose Game</option>
+                        {% for title in titles %}
+                        <option value="{{ title.game_title }}">{{ title.game_title }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="game_title">Game Title</label>
+                </div>
+            </div>
+           <!--
+            <div class="row">
+                <div class="input-field col s12">
+                    
                     <input id="game_title" type="text" name="game_title" class="autocomplete validate" required>
                     <label for="game_title">Game Title</label>
                 </div>
             </div>
+            --> 
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pen prefix deep-purple-text"></i>
