@@ -88,7 +88,7 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
-    reviews = mongo.db.reviews.find()
+    reviews = mongo.db.reviews.find({"username": session["user"]})
 
     if session["user"]:
         return render_template(
