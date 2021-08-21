@@ -151,8 +151,8 @@ def delete_review(review_id):
     flash("Task Successfully Deleted")
     return redirect(url_for('profile', username=session['user']))
 
-
 # -------------------- Admin Game Functions ------------------
+
 
 @app.route("/add_game", methods=["GET", "POST"])
 def add_game():
@@ -192,6 +192,15 @@ def add_game():
 
     titles = list(mongo.db.catalogue.find().sort("game_title", 1))
     return render_template("add_game.html", titles=titles)
+
+
+@app.route("/edit_game/<game_id>", methods=["GET", "POST"])
+def edit_game(game_id):
+
+    game = mongo.db.catalogue.find_one({"_id": ObjectId(game_id)})
+
+    titles = list(mongo.db.catalogue.find().sort("game_title", 1))
+    return render_template("edit_game.html", game=game, titles=titles)
 
 
 if __name__ == "__main__":
