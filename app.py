@@ -104,6 +104,8 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
+# ------------------ Review Functions ----------------------
+
 
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
@@ -148,6 +150,14 @@ def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Task Successfully Deleted")
     return redirect(url_for('profile', username=session['user']))
+
+
+# -------------------- Admin Game Functions ------------------
+
+@app.route("/add_game", methods=["GET", "POST"])
+def add_game():
+    titles = list(mongo.db.catalogue.find().sort("game_title", 1))
+    return render_template("add_game.html", titles=titles)
 
 
 if __name__ == "__main__":

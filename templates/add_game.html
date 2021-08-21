@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <h3 class="deep-purple-text center-align">
+        Add Game
+    </h3>
+
+    <div class="row card-panel grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('add_game') }}">
+            <!-- Game Title Entry -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-scroll prefix deep-purple-text"></i>
+                    <input id="game_title" name="game_title" class="validate" required></input>
+                    <label for="game_title">Game Title</label>
+                </div>
+            </div>
+            <!-- Game Description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen prefix deep-purple-text"></i>
+                    <textarea id="game_description" name="game_description" class="materialize-textarea validate" required></textarea>
+                    <label for="game_description">Game Description</label>
+                </div>
+            </div>
+            <!-- Player Counts -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-user-minus prefix deep-purple-text"></i>
+                    <input id="min_player_count" name="min_player_count" class="validate" required></input>
+                    <label for="min_player_count">Min. Player Count</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-user-plus prefix deep-purple-text"></i>
+                    <input id="max_player_count" name="max_player_count" class="validate" required></input>
+                    <label for="max_player_count">Max. Player Count</label>
+                </div>
+            </div>
+            <!-- Play Time -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-hourglass-start prefix deep-purple-text"></i>
+                    <input id="min_play_time" name="min_play_time" class="validate" required></input>
+                    <label for="min_play_time">Min. Play Time</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-hourglass-end prefix deep-purple-text"></i>
+                    <input id="max_play_time" name="max_play_time" class="validate" required></input>
+                    <label for="max_play_time">Max. Play Time</label>
+                </div>
+            </div>
+            <!-- Release Year and Publisher -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-calendar prefix deep-purple-text"></i>
+                    <input id="release_year" name="release_year" class="validate" required></input>
+                    <label for="release_year">Release Year</label>
+                </div>
+                <div class="input-field col s6">
+                    <i class="fas fa-book-reader prefix deep-purple-text"></i>
+                    <input id="publisher" name="publisher" class="validate" required></input>
+                    <label for="publisher">Publisher</label>
+                </div>
+            </div>
+            <!-- Designer(s)-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pen-fancy prefix deep-purple-text"></i>
+                    <input id="designer" name="designer" class="validate" required></input>
+                    <label for="designer">Designer(s)</label>
+                </div>
+            </div>
+            <!-- Artist(s) -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-paint-brush prefix deep-purple-text"></i>
+                    <input id="artist" name="artist" class="validate" required></input>
+                    <label for="artist">Artist(s)</label>
+                </div>
+            </div>
+            <!-- Image URL -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-image prefix deep-purple-text"></i>
+                    <input id="image_url" name="image_url" class="validate" required></input>
+                    <label for="image_url">Image URL</label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
