@@ -183,7 +183,7 @@ def add_game():
             }
 
             mongo.db.catalogue.insert_one(game)
-            flash("Game Added")
+            flash("Game Added Successfully")
             return redirect(url_for('profile', username=session['user']))
 
     else:
