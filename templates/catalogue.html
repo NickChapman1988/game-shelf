@@ -1,18 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for game in catalogue %}
-        {{ game.game_title }}<br>
-        {{ game.game_description }}<br>
-        {{ game.min_player_count }} - {{ game.max_player_count }}<br>
-        {{ game.min_play_time }} - {{ game.max_play_time }}<br>
-        {{ game.min_player_age }}<br>
-        {{ game.release_year }}<br>
-        {{ game.designer }}<br>
-        {{ game.artist }}<br>
-        {{ game.publisher }}<br>
-        <img src="{{ game.image_url }}"><br>
+    <h3 class="center-align deep-purple-text">
         <hr>
-    {% endfor %}
+        Games
+        <hr>
+    </h3>
+
+    <div class="row">
+        <div class="col">
+            <table class="responsive-table">
+                <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th></th>
+                    <th>Title</th>
+                    {% if session.user %}
+                        <th>Your Rating</th>
+                    {% endif %}
+                    <th>Avg. Rating</th>
+                    <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    {% for game in catalogue %}
+                        <tr>                           
+                            <td>
+                                1
+                            </td>
+                            
+                            <td><img class="game-thumbnail" src="{{ game.image_url }}"></td>
+                            <td>
+                                <p>{{ game.game_title }}</p>
+                                <p>{{ game.game_description }}</p>
+                            </td>
+                            {% if session.user %}
+                                <td class="center-align">8</td>
+                            {% endif %}
+                            <td class="center-align">8</td>
+                            <td>
+                                <a href="#" class="btn-small light-green">Buy</a>
+                                <a href="#" class="btn-small purple lighten-2">Review</a>
+                            </td>   
+                        </tr>
+                    {% endfor %}     
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 {% endblock %}
