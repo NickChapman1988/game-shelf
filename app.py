@@ -197,6 +197,26 @@ def add_game():
 
 @app.route("/edit_game/<game_id>", methods=["GET", "POST"])
 def edit_game(game_id):
+    if request.method == "POST":
+        submit = {
+                "game_title": request.form.get("game_title"),
+                "game_description": request.form.get("game_description"),
+                "min_player_count": request.form.get("min_player_count"),
+                "max_player_count": request.form.get("max_player_count"),
+                "min_play_time": request.form.get("min_play_time"),
+                "max_play_time": request.form.get("max_play_time"),
+                "min_player_age": request.form.get("min_player_age"),
+                "release_year": request.form.get("release_year"),
+                "designer": request.form.get("designer"),
+                "artist": request.form.get("artist"),
+                "publisher": request.form.get("publisher"),
+                "image_url": request.form.get("image_url"),
+                "shop_link": request.form.get("shop_link")
+            }
+
+        mongo.db.catalogue.update({"_id": ObjectId(game_id)}, submit)
+        flash("Game Updated Successfully")
+        return redirect(url_for('get_catalogue'))
 
     game = mongo.db.catalogue.find_one({"_id": ObjectId(game_id)})
 
