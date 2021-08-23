@@ -179,7 +179,8 @@ def add_game():
                 "designer": request.form.get("designer"),
                 "artist": request.form.get("artist"),
                 "publisher": request.form.get("publisher"),
-                "image_url": request.form.get("image_url")
+                "image_url": request.form.get("image_url"),
+                "shop_link": request.form.get("shop_link")
             }
 
             mongo.db.catalogue.insert_one(game)
