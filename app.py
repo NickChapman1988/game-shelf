@@ -161,35 +161,37 @@ def add_game():
 
             # check if game already exists in db
             existing_game = mongo.db.catalogue.find_one(
-                {"game_title": request.form.get("game_title").lower()})
+                {"game_title": request.form.get("game_title")})
 
             if existing_game:
-                flash("Game already added")
+                flash("Game already added!")
                 return redirect(url_for('profile', username=session['user']))
 
-            game = {
-                "game_title": request.form.get("game_title"),
-                "game_description": request.form.get("game_description"),
-                "min_player_count": request.form.get("min_player_count"),
-                "max_player_count": request.form.get("max_player_count"),
-                "min_play_time": request.form.get("min_play_time"),
-                "max_play_time": request.form.get("max_play_time"),
-                "min_player_age": request.form.get("min_player_age"),
-                "release_year": request.form.get("release_year"),
-                "designer": request.form.get("designer"),
-                "artist": request.form.get("artist"),
-                "publisher": request.form.get("publisher"),
-                "image_url": request.form.get("image_url"),
-                "shop_link": request.form.get("shop_link")
-            }
+            else:
 
-            mongo.db.catalogue.insert_one(game)
-            flash("Game Added Successfully")
-            return redirect(url_for('profile', username=session['user']))
+                game = {
+                    "game_title": request.form.get("game_title"),
+                    "game_description": request.form.get("game_description"),
+                    "min_player_count": request.form.get("min_player_count"),
+                    "max_player_count": request.form.get("max_player_count"),
+                    "min_play_time": request.form.get("min_play_time"),
+                    "max_play_time": request.form.get("max_play_time"),
+                    "min_player_age": request.form.get("min_player_age"),
+                    "release_year": request.form.get("release_year"),
+                    "designer": request.form.get("designer"),
+                    "artist": request.form.get("artist"),
+                    "publisher": request.form.get("publisher"),
+                    "image_url": request.form.get("image_url"),
+                    "shop_link": request.form.get("shop_link")
+                }
+
+                mongo.db.catalogue.insert_one(game)
+                flash("Game Added Successfully")
+                return redirect(url_for('profile', username=session['user']))
 
     else:
         flash("Sorry, you don't have permission to access this page")
-        return redirect(url_for('catalogue'))
+        return redirect(url_for('get_catalogue'))
 
     titles = list(mongo.db.catalogue.find().sort("game_title", 1))
     return render_template("add_game.html", titles=titles)

@@ -12,7 +12,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-scroll prefix deep-purple-text"></i>
                     <input id="game_title" name="game_title" class="validate" required></input>
-                    <label for="game_title">Game Title</label>
+                    <label for="game_title" class="active">Game Title</label>
                 </div>
             </div>
             <!-- Game Description -->
@@ -20,25 +20,25 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pen prefix deep-purple-text"></i>
                     <textarea id="game_description" name="game_description" class="materialize-textarea validate" required></textarea>
-                    <label for="game_description">Game Description</label>
+                    <label for="game_description" class="active">Game Description</label>
                 </div>
             </div>
             <!-- Player Counts -->
             <div class="row">
                 <div class="input-field col s4">
                     <i class="fas fa-user-minus prefix deep-purple-text"></i>
-                    <input id="min_player_count" name="min_player_count" class="validate" required></input>
-                    <label for="min_player_count">Min. Player Count</label>
+                    <input id="min_player_count" name="min_player_count" class="validate" pattern="[0-9]{1,2}" required></input>
+                    <label for="min_player_count" class="active">Min. Player Count</label>
                 </div>
                 <div class="input-field col s4">
                     <i class="fas fa-user-plus prefix deep-purple-text"></i>
-                    <input id="max_player_count" name="max_player_count" class="validate" required></input>
-                    <label for="max_player_count">Max. Player Count</label>
+                    <input id="max_player_count" name="max_player_count" class="validate" pattern="[0-9]{1,2}" required></input>
+                    <label for="max_player_count" class="active">Max. Player Count</label>
                 </div>
                 <div class="input-field col s4">
                     <i class="fas fa-user-clock prefix deep-purple-text"></i>
                     <input id="min_player_age" name="min_player_age" class="validate" required></input>
-                    <label for="min_player_age">Min. Player Age</label>
+                    <label for="min_player_age" class="active">Min. Player Age</label>
                 </div>
             </div>
             <!-- Play Time -->
@@ -46,25 +46,25 @@
                 <div class="input-field col s6">
                     <i class="fas fa-hourglass-start prefix deep-purple-text"></i>
                     <input id="min_play_time" name="min_play_time" class="validate" required></input>
-                    <label for="min_play_time">Min. Play Time</label>
+                    <label for="min_play_time" class="active">Min. Play Time</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="fas fa-hourglass-end prefix deep-purple-text"></i>
                     <input id="max_play_time" name="max_play_time" class="validate" required></input>
-                    <label for="max_play_time">Max. Play Time</label>
+                    <label for="max_play_time" class="active">Max. Play Time</label>
                 </div>
             </div>
             <!-- Release Year and Publisher -->
             <div class="row">
                 <div class="input-field col s6">
                     <i class="fas fa-calendar prefix deep-purple-text"></i>
-                    <input id="release_year" name="release_year" class="validate" required></input>
-                    <label for="release_year">Release Year</label>
+                    <input id="release_year" name="release_year" class="validate" pattern="[0-9]{4}" required></input>
+                    <label for="release_year" class="active">Release Year</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="fas fa-book-reader prefix deep-purple-text"></i>
                     <input id="publisher" name="publisher" class="validate" required></input>
-                    <label for="publisher">Publisher</label>
+                    <label for="publisher" class="active">Publisher</label>
                 </div>
             </div>
             <!-- Designer(s)-->
@@ -72,7 +72,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-pen-fancy prefix deep-purple-text"></i>
                     <input id="designer" name="designer" class="validate" required></input>
-                    <label for="designer">Designer(s)</label>
+                    <label for="designer" class="active">Designer(s)</label>
                 </div>
             </div>
             <!-- Artist(s) -->
@@ -80,7 +80,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-paint-brush prefix deep-purple-text"></i>
                     <input id="artist" name="artist" class="validate" required></input>
-                    <label for="artist">Artist(s)</label>
+                    <label for="artist" class="active">Artist(s)</label>
                 </div>
             </div>
             <!-- Image URL -->
@@ -88,7 +88,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-image prefix deep-purple-text"></i>
                     <input id="image_url" name="image_url" class="validate" required></input>
-                    <label for="image_url">Image URL</label>
+                    <label for="image_url" class="active">Image URL</label>
                 </div>
             </div>
             <!-- Shop Link -->
@@ -96,7 +96,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-shopping-cart prefix deep-purple-text"></i>
                     <input id="shop_link" name="shop_link" class="validate" required></input>
-                    <label for="shop_link">Shop Link</label>
+                    <label for="shop_link" class="active">Shop Link</label>
                 </div>
             </div>
             <!-- Submit Button -->
