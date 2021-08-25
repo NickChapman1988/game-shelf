@@ -25,29 +25,29 @@
 
                 <tbody>
                     {% for game in catalogue %}
-                        <tr>                           
+                        <tr>
                             <td>
                                 1
                             </td>
-                            
                             <td><img class="game-thumbnail" src="{{ game.image_url }}"></td>
                             <td>
                                 <p>{{ game.game_title }}</p>
                                 <p>{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}
-                                <td class="center-align">8</td>
+                            <td class="center-align">8</td>
                             {% endif %}
                             <td class="center-align">8</td>
                             <td>
                                 <a href="{{ game.shop_link }}" target="_blank" class="btn-small light-green">Buy</a>
                                 <a href="#" class="btn-small purple lighten-2">Review</a>
                                 {% if session.user|lower == "admin"|lower %}
-                                    <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit Game</a>
+                                <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit
+                                    Game</a>
                                 {% endif %}
-                            </td>   
+                            </td>
                         </tr>
-                    {% endfor %}     
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
