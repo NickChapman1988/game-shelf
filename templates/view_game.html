@@ -1,7 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align deep-purple-text">{{ game.game_title }}</h3>
-    <p>{{ game.game_description }}</p>
+    <hr>
+    <h3 class="center-align deep-purple-text">Individual Game Page</h3>
+    <hr>
+
+    <div class="row">
+        <div class="col s12">
+            <div id="rating-box" class="col s2 center-align">
+                Rating
+            </div>
+            <div class="col s6">
+                <img src="{{ game.image_url }}">
+            </div>
+            <div class="col s12 center-align">
+                <h4>
+                    {{ game.game_title }}
+                </h4>
+                <p>
+                    {{ game.game_description }}
+                </p>
+            </div>
+            <div class="col s12">
+                <div id="game-details">
+                    <div class="col s6">
+                        <h6>Player Count:</h6>
+                        <p>{{ game.min_player_count }} - {{ game.max_player_count }}</p>
+                    </div>
+                    <div class="col s6">
+                        <h6>Play Time:</h6>
+                        <p>{{ game.min_play_time }} - {{ game.max_play_time }}</p>
+                    </div>
+                    <div class="col s12 center-align">
+                        <h6>Player Age:</h6>
+                        <p>{{ game.min_player_age }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s6">
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-4">Buy</a>
+                    </div>
+                    <div class="col s6">
+                        <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 {% endblock %}
