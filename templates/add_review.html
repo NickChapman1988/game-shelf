@@ -14,7 +14,7 @@
                     <select id="game_title" name="game_title" class="validate" required>
                         <option value="" disabled selected>Choose Game</option>
                         {% for title in titles %}
-                        <option value="{{ title.game_title }}">{{ title.game_title }}</option>
+                            <option value="{{ title.game_title }}">{{ title.game_title }}</option>
                         {% endfor %}
                     </select>
                     <label for="game_title">Game Title</label>

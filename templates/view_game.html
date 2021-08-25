@@ -7,10 +7,10 @@
 
     <div class="row">
         <div class="col s12">
-            <div id="rating-box" class="col s2 center-align">
-                Rating
+            <div id="rating-box" class="col s2 m1 center-align">
+                {{ game.game_rating}}
             </div>
-            <div class="col s6">
+            <div class="col s6 m3 ">
                 <img src="{{ game.image_url }}">
             </div>
             <div class="col s12 center-align">
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col s12">
                     <div class="col s6">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-4">Buy</a>
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
                     </div>
                     <div class="col s6">
                         <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>

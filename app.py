@@ -29,6 +29,7 @@ def get_catalogue():
 @app.route("/view_game/<game_id>")
 def view_game(game_id):
     catalogue = mongo.db.catalogue.find()
+
     game = mongo.db.catalogue.find_one({"_id": ObjectId(game_id)})
     return render_template("view_game.html", game=game, catalogue=catalogue)
 
