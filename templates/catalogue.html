@@ -31,7 +31,7 @@
                             </td>
                             <td><img class="game-thumbnail" src="{{ game.image_url }}"></td>
                             <td>
-                                <p>{{ game.game_title }}</p>
+                                <a href="{{ url_for('view_game', game_id=game._id) }}">{{ game.game_title }}</a>
                                 <p>{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}

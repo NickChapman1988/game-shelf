@@ -26,6 +26,13 @@ def get_catalogue():
     return render_template("catalogue.html", catalogue=catalogue)
 
 
+@app.route("/view_game/<game_id>")
+def view_game(game_id):
+    catalogue = mongo.db.catalogue.find()
+    game = mongo.db.catalogue.find_one({"_id": ObjectId(game_id)})
+    return render_template("view_game.html", game=game, catalogue=catalogue)
+
+
 # User Authentication adapted from 'Task Manager' mini-project by CI
 @app.route("/register", methods=["GET", "POST"])
 def register():
