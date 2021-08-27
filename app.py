@@ -30,8 +30,15 @@ def get_catalogue():
 def view_game(game_id):
     catalogue = mongo.db.catalogue.find()
 
+    # find game in database
     game = mongo.db.catalogue.find_one({"_id": ObjectId(game_id)})
-    return render_template("view_game.html", game=game, catalogue=catalogue)
+    # pull game title from database
+    title = mongo.db.catalogue.find_one(game)["game_title"]
+    # find reviews for game title, sort by most recent
+    reviews = mongo.db.reviews.find(
+        {"game_title": title}).sort("date_created", -1)
+    return render_template(
+        "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
 
 
 # User Authentication adapted from 'Task Manager' mini-project by CI

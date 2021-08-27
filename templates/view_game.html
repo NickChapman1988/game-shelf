@@ -54,12 +54,28 @@
     </div>
     <hr>
     <div class="row">
-        <div id="reviews-box" class="col s12 center-align">
-            <h4 class="deep-purple-text">
+        <div id="reviews-box" class="col s12">
+            <h4 class="deep-purple-text center-align">
                 Reviews
             </h4>
-            <!--User Reviews go in here-->
+            <ul class="collapsible">
+                {% for review in reviews %}
+                    <li class="row review-box">
+                        <div class="collapsible-header deep-purple white-text text-shadow">
+                            <div class="col left-align">
+                                <i class="fas fa-caret-down"></i>
+                                <strong>{{ review.game_title }}</strong>
+                            </div>   
+                        </div>
+                        <div class="collapsible-body">
+                            <p><em>Written by {{ review.username|capitalize() }} on {{ review.date_created.strftime("%B %d, %Y") }}</em></p>
+                            <p><strong>Rating: {{ review.game_rating }}</strong></p>
+                            <span>{{ review.review_text }}</span>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
-
+    
 {% endblock %}
