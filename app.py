@@ -40,6 +40,8 @@ def view_game(game_id):
     return render_template(
         "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
 
+# ------------------------------------- User Authentication -----------
+
 
 # User Authentication adapted from 'Task Manager' mini-project by CI
 @app.route("/register", methods=["GET", "POST"])
@@ -128,6 +130,7 @@ def add_review():
         review = {
             "username": session["user"],
             "game_title": request.form.get("game_title"),
+            "review_title": request.form.get("review_title"),
             "review_text": request.form.get("review_text"),
             "date_created": datetime.now(),
             "game_rating": request.form.get("game_rating")
@@ -146,6 +149,7 @@ def edit_review(review_id):
         submit = {
             "username": session["user"],
             "game_title": request.form.get("game_title"),
+            "review_title": request.form.get("review_title"),
             "review_text": request.form.get("review_text"),
             "date_created": datetime.now(),
             "game_rating": request.form.get("game_rating")

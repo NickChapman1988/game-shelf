@@ -1,41 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <h3 class="center-align deep-purple-text">
-                {{username}}'s Profile
-            </h3>         
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel">
+                <h3 class="center-align deep-purple-text">
+                    {{username}}'s Profile
+                </h3>         
+            </div>
         </div>
     </div>
-</div>
-<a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Add Review</a>
-{% if session.user|lower == "admin"|lower %}
-    <a href="{{ url_for('add_game') }}" class="btn-large blue darken-3">Add Game</a>
-{% endif %}
+    <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Add Review</a>
+    {% if session.user|lower == "admin"|lower %}
+        <a href="{{ url_for('add_game') }}" class="btn-large blue darken-3">Add Game</a>
+    {% endif %}
 
-<h4 class="left-align deep-purple-text">{{username}}'s Reviews</h4>
-<ul class="collapsible">
-    {% for review in reviews %}
-    <li class="row review-box">
-        <div class="collapsible-header deep-purple white-text text-shadow">
-            <div class="col s8">
-                <i class="fas fa-caret-down"></i>
-                <strong>{{ review.game_title }}</strong>
+    <h4 class="left-align deep-purple-text">{{username}}'s Reviews</h4>
+    <ul class="collapsible">
+        {% for review in reviews %}
+        <li class="row review-box">
+            <div class="collapsible-header deep-purple white-text text-shadow">
+                <div class="col s8">
+                    <i class="fas fa-caret-down"></i>
+                    <strong>{{ review.game_title }}</strong>
+                </div>
+                <div class="col s4">                
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small purple lighten-2">Edit</a>
+                    <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn-small red accent-3">Delete</a>
+                </div>
             </div>
-            <div class="col s4">                
-                <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small purple lighten-2">Edit</a>
-                <a href="{{ url_for('delete_review', review_id=review._id) }}" class="btn-small red accent-3">Delete</a>
+            <div class="collapsible-body">
+                <strong>{{ review.review_title }}</strong>
+                <p><em>Written on {{ review.date_created.strftime("%B %d, %Y") }}</em></p>
+                <p><strong>Rating: {{ review.game_rating }}</strong></p>
+                <span>{{ review.review_text }}</span>
             </div>
-        </div>
-        <div class="collapsible-body">
-            <p><em>Written on {{ review.date_created.strftime("%B %d, %Y") }}</em></p>
-            <p><strong>Rating: {{ review.game_rating }}</strong></p>
-            <span>{{ review.review_text }}</span>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
+        </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}

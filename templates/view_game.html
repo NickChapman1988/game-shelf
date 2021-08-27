@@ -17,7 +17,7 @@
         <div class="col s12 m6">
             <div id="game-details" class="col s12 center-align">
                 <h4>
-                    {{ game.game_title }}
+                    {{ game.game_title }} ({{ game.release_year }})
                 </h4>
                 <p>
                     {{ game.game_description }}
@@ -50,6 +50,14 @@
             <div class="col s6">
                 <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
             </div>
+        </div>
+    </div>
+    <div id="long-description">
+        <h5>
+            Description
+        </h5>
+        <div>
+            
         </div>
     </div>
     <hr>
