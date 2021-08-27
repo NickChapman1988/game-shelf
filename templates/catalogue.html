@@ -11,18 +11,17 @@
         <div class="col">
             <table class="responsive-table">
                 <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th></th>
-                    <th>Title</th>
-                    {% if session.user %}
-                        <th>Your Rating</th>
-                    {% endif %}
-                    <th>Avg. Rating</th>
-                    <th></th>
-                </tr>
+                    <tr>
+                        <th>Rank</th>
+                        <th></th>
+                        <th>Title</th>
+                        {% if session.user %}
+                            <th>Your Rating</th>
+                        {% endif %}
+                        <th>Avg. Rating</th>
+                        <th></th>
+                    </tr>
                 </thead>
-
                 <tbody>
                     {% for game in catalogue %}
                         <tr>
@@ -50,7 +49,7 @@
                                 {% endif %}
                             </td>
                         </tr>
-                    {% endfor %}
+                    {% endfor %}     
                 </tbody>
             </table>
         </div>

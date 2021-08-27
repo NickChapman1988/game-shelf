@@ -6,14 +6,16 @@
     <hr>
 
     <div class="row">
-        <div class="col s12">
-            <div id="rating-box" class="col s2 m1 center-align">
-                {{ game.game_rating}}
+        <div class="col s12 m6">
+            <div >
+                <img id="game-image" class="col s8" src="{{ game.image_url }}">
             </div>
-            <div class="col s6 m3 ">
-                <img src="{{ game.image_url }}">
+            <div id="rating-box" class="col s2">
+                <!--game rating goes in here-->
             </div>
-            <div class="col s12 center-align">
+        </div>
+        <div class="col s12 m6">
+            <div id="game-details" class="col s12 center-align">
                 <h4>
                     {{ game.game_title }}
                 </h4>
@@ -21,34 +23,43 @@
                     {{ game.game_description }}
                 </p>
             </div>
-            <div class="col s12">
-                <div id="game-details">
-                    <div class="col s6">
-                        <h6>Player Count:</h6>
-                        <p>{{ game.min_player_count }} - {{ game.max_player_count }}</p>
-                    </div>
-                    <div class="col s6">
-                        <h6>Play Time:</h6>
-                        <p>{{ game.min_play_time }} - {{ game.max_play_time }}</p>
-                    </div>
-                    <div class="col s12 center-align">
-                        <h6>Player Age:</h6>
-                        <p>{{ game.min_player_age }}</p>
-                    </div>
+        </div>
+        <div id="game-stats" class="col s12">
+            <div class="center-align">
+                <div class="col s6 m4">
+                    <h6>Player Count:</h6>
+                    <p>{{ game.min_player_count }} - {{ game.max_player_count }}</p>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="col s6">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
-                    </div>
-                    <div class="col s6">
-                        <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
-                    </div>
+                <div class="col s6 m4">
+                    <h6>Play Time:</h6>
+                    <p>{{ game.min_play_time }} - {{ game.max_play_time }} mins</p>
+                </div>
+                <div class="col s12 m4">
+                    <h6>Player Age:</h6>
+                    <p>{{ game.min_player_age }}</p>
                 </div>
             </div>
         </div>
-
+    </div>
+    <hr>
+    <div class="row">
+        <div id="button-box" class="col s12 center-align">
+            <div class="col s6">
+                <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+            </div>
+            <div class="col s6">
+                <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div id="reviews-box" class="col s12 center-align">
+            <h4 class="deep-purple-text">
+                Reviews
+            </h4>
+            <!--User Reviews go in here-->
+        </div>
     </div>
 
 {% endblock %}
