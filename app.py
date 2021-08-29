@@ -39,7 +39,8 @@ def view_game(game_id):
         {"game_title": title}).sort("date_created", -1)
 
     return render_template(
-        "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
+        "view_game.html", game=game, catalogue=catalogue,
+        reviews=reviews)
 
 # ------------------------------------- User Authentication -----------
 
