@@ -37,6 +37,7 @@ def view_game(game_id):
     # find reviews for game title, sort by most recent
     reviews = mongo.db.reviews.find(
         {"game_title": title}).sort("date_created", -1)
+
     return render_template(
         "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
 

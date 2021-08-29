@@ -3,11 +3,11 @@ html, body {
     padding: 0px;
     border: 0px;
 
-    /*Remove unnecessary x-scroll */
+    /*Remove unnecessary x-scroll 
     width: 100%;
     height: 100%;
     max-width: 100vw;
-    overflow-x: hidden;
+    overflow-x: hidden;*/
 }
 
 .text-shadow {
@@ -31,10 +31,23 @@ html, body {
     margin-bottom: 5px;
 } 
 
+#games-table {
+    display: block;
+    overflow-x: auto;
+}
+
+/* Image on catalogue page */
 .game-thumbnail {
-    max-width: 100px;
-    max-height: 100px; 
-    object-fit: cover;
+        max-width: 100px;
+        max-height: 100px; 
+        object-fit: cover;
+}
+
+/* Description on catalogue page */
+@media only screen and (max-width: 768px){
+    .game-description {
+        display: none;
+    }
 }
 
 #rating-box {
@@ -44,6 +57,7 @@ html, body {
     border-radius: 25%;
 }
 
+/* Image on game page */
 #game-image {
     max-width: 200px;
     max-height: 200px;

@@ -8,8 +8,8 @@
     </h3>
 
     <div class="row">
-        <div class="col">
-            <table class="responsive-table">
+        <div class="col s12">
+            <table id="games-table">
                 <thead>
                     <tr>
                         <th>Rank</th>
@@ -28,6 +28,7 @@
                             <td>
                                 1
                             </td>
+                            
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}">
                                     <img class="game-thumbnail" src="{{ game.image_url }}">
@@ -35,7 +36,7 @@
                             </td>
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}" class="deep-purple-text"><strong>{{ game.game_title }}</strong></a>
-                                <p>{{ game.game_description }}</p>
+                                <p class="game-description">{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}
                                 <td class="center-align">8</td>
@@ -47,7 +48,7 @@
                                 {% if session.user|lower == "admin"|lower %}
                                     <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit Game</a>
                                 {% endif %}
-                            </td>
+                            </td>    
                         </tr>
                     {% endfor %}     
                 </tbody>
