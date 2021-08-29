@@ -69,7 +69,7 @@
                 </div>
                 <div class="input-field col s4">
                     <i class="fas fa-user-plus prefix deep-purple-text"></i>
-                    <input id="max_player_count" name="max_player_count" type="text" value="{{ game.max_player_count }}" class="validate" required></input>
+                    <input id="max_player_count" name="max_player_count" type="text" value="{{ game.max_player_count }}" class="validate"></input>
                     <label for="max_player_count">Max. Player Count</label>
                 </div>
                 <div class="input-field col s4">
@@ -82,12 +82,12 @@
             <div class="row">
                 <div class="input-field col s6">
                     <i class="fas fa-hourglass-start prefix deep-purple-text"></i>
-                    <input id="min_play_time" name="min_play_time" type="text" value="{{ game.min_play_time }}" class="validate" required></input>
+                    <input id="min_play_time" name="min_play_time" type="text" value="{{ game.min_play_time }}" class="validate" pattern="[0-9]" required></input>
                     <label for="min_play_time">Min. Play Time</label>
                 </div>
                 <div class="input-field col s6">
                     <i class="fas fa-hourglass-end prefix deep-purple-text"></i>
-                    <input id="max_play_time" name="max_play_time" type="text" value="{{ game.max_play_time }}" class="validate" required></input>
+                    <input id="max_play_time" name="max_play_time" type="text" value="{{ game.max_play_time }}" class="validate" pattern="[0-9]"></input>
                     <label for="max_play_time">Max. Play Time</label>
                 </div>
             </div>
