@@ -192,6 +192,16 @@ def add_game():
                 game = {
                     "game_title": request.form.get("game_title"),
                     "game_description": request.form.get("game_description"),
+                    "description_para_1": request.form.get(
+                        "description_para_1"),
+                    "description_para_2": request.form.get(
+                        "description_para_2"),
+                    "description_para_3": request.form.get(
+                        "description_para_3"),
+                    "description_para_4": request.form.get(
+                        "description_para_4"),
+                    "description_para_5": request.form.get(
+                        "description_para_5"),
                     "min_player_count": request.form.get("min_player_count"),
                     "max_player_count": request.form.get("max_player_count"),
                     "min_play_time": request.form.get("min_play_time"),
@@ -223,6 +233,11 @@ def edit_game(game_id):
         submit = {
                 "game_title": request.form.get("game_title"),
                 "game_description": request.form.get("game_description"),
+                "description_para_1": request.form.get("description_para_1"),
+                "description_para_2": request.form.get("description_para_2"),
+                "description_para_3": request.form.get("description_para_3"),
+                "description_para_4": request.form.get("description_para_4"),
+                "description_para_5": request.form.get("description_para_5"),
                 "min_player_count": request.form.get("min_player_count"),
                 "max_player_count": request.form.get("max_player_count"),
                 "min_play_time": request.form.get("min_play_time"),
