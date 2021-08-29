@@ -89,6 +89,9 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
 #### Other:
 * [Code Institute Course Content](https://courses.codeinstitute.net/) - Primary source of learning code.
+* [Stack Overflow](https://stackoverflow.com/) - Used for general troubleshooting and examples.
+* [W3Schools](https://www.w3schools.com/) - Used for examples and tutorials.
+* [ChromeDevTools](https://developers.google.com/web/tools/chrome-devtools) - Used frequently to detect any issues/bugs or layout differences.
 
 ---
 
@@ -97,6 +100,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 #### Validation
 
 #### Project Bugs and Solutions
+* CSS for page overflow and x-scrolling meant the games catalogue table was cutting off anything that went beyond the edge of the screen on mobile devices; removing overflow:hidden meant that any horizontal scrolling moved the whole page (leaving ugly whitespace on the righthand side of the page). In order to add x-scrolling to the catalogue table only, I found and used an answer from [Serge Stroobandt](https://stackoverflow.com/a/30423904) on Stack Overflow which meant users are able to scroll horizontally in the table only without compromising the layout of the table itself, or adding any whitespace to other elements on the page.
 
 #### Testing User Stories
 
@@ -165,6 +169,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
+* Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
 
 ## Acknowledgements
 
