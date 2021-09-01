@@ -2,14 +2,24 @@ html, body {
     margin: 0px;
     padding: 0px;
     border: 0px;
-    
+
+    /* Materialize Sticky Footer */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
     /*Remove unnecessary x-scroll */
     width: 100%;
-    height: 100%;
     max-width: 100vw;
     overflow-x: hidden;
 }
 
+/* Materialize Sticky Footer */
+main {
+    flex: 1 0 auto;
+}
+
+/*----------------------------------- General --------------------*/
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -22,9 +32,33 @@ html, body {
     margin: 5px;
 }
 
+/*---------------------------------Header--------------------------*/
+
 .collapsible-header .col strong {
     margin: 5px;
     line-height: 42px;
+}
+
+/*--------------------------------- Footer -----------------------*/
+
+.page-footer {
+    position: relative;
+    background-color: white;
+    background: url("../images/pencils.jpg") no-repeat center bottom fixed;
+    background-size: 100%; 
+    object-fit: cover; 
+}
+
+#social-links li {
+    display: inline-block;
+}
+
+.social-icon i {
+    font-size: 36px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: black; 
 }
 
 .review-box {
