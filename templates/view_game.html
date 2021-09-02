@@ -10,11 +10,9 @@
             <div >
                 <img id="game-image" class="col s8" src="{{ game.image_url }}">
             </div>
-            <div id="rating-box" class="col s2">
+            <div id="rating-box" class="col s2 center-align">
                 <!--game rating goes in here-->
-                {% for review in reviews %}
-                    {{ review.game_rating }}
-                {% endfor %}
+                <strong>{{ average_rating }}</strong>
             </div>
         </div>
         <div class="col s12 m6">

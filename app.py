@@ -38,8 +38,15 @@ def view_game(game_id):
     reviews = list(mongo.db.reviews.find(
         {"game_title": title}).sort("date_created", -1))
 
+    ratings = 0
+    for review in reviews:
+        ratings = ratings + int(review.get("game_rating"))
+
+    average_rating = ratings / len(reviews)
+
     return render_template(
-        "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
+        "view_game.html", game=game, catalogue=catalogue,
+        reviews=reviews, average_rating=average_rating)
 
 # ------------------------------------- User Authentication -----------
 
