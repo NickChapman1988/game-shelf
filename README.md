@@ -83,7 +83,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 * [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes.
 * [FontAwesome](https://fontawesome.com/) - Used for the nav bar toggler icon.
 * [JQuery](https://jquery.com) - The project uses JQuery to simplify DOM manipulation.
-* [GoogleFonts](https://fonts.google.com/) -
+* [GoogleFonts](https://fonts.google.com/) - 'Syncopate' and 'Raleway' fonts.
 
 #### Version Control:
 * [Github](https://github.com/) - Used to store the code 

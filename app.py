@@ -35,12 +35,11 @@ def view_game(game_id):
     # pull game title from database
     title = mongo.db.catalogue.find_one(game)["game_title"]
     # find reviews for game title, sort by most recent
-    reviews = mongo.db.reviews.find(
-        {"game_title": title}).sort("date_created", -1)
+    reviews = list(mongo.db.reviews.find(
+        {"game_title": title}).sort("date_created", -1))
 
     return render_template(
-        "view_game.html", game=game, catalogue=catalogue,
-        reviews=reviews)
+        "view_game.html", game=game, catalogue=catalogue, reviews=reviews)
 
 # ------------------------------------- User Authentication -----------
 
