@@ -81,6 +81,9 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
 #### Libraries:
 * [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes.
+* [FontAwesome](https://fontawesome.com/) - Used for the nav bar toggler icon.
+* [JQuery](https://jquery.com) - The project uses JQuery to simplify DOM manipulation.
+* [GoogleFonts](https://fonts.google.com/) -
 
 #### Version Control:
 * [Github](https://github.com/) - Used to store the code 
@@ -170,6 +173,8 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits
 * Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
+* Footer image 'colored pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+  
 
 ## Acknowledgements
 
