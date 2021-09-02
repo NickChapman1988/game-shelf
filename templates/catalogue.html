@@ -8,7 +8,7 @@
     </h3>
 
     <div class="row">
-        <div class="col s12">
+        <div class="col s12 l9">
             <table id="games-table">
                 <thead>
                     <tr>
@@ -53,6 +53,35 @@
                     {% endfor %}     
                 </tbody>
             </table>
+        </div>
+        <div class="col l3" id="reviews-column">
+            <h4 class="center-align deep-purple-text page-header">
+                Latest Reviews
+            </h4>
+            {% for review in latest_reviews %}
+                <!-- Review Title -->
+                <div class="row latest-reviews">
+                    <div class="col l12">
+                        <div class="card-panel">
+                            <h5 class="deep-purple-text">
+                                {{ review.review_title}}
+                            </h5>
+                            <h6>
+                                {{ review.game_title }}
+                            </h6>
+                            <strong>Rating: {{ review.game_rating }}</strong>
+                            <p>
+                                {{ review.review_text }}
+                            </p>
+                            <p>
+                                <em>Written by {{ review.username|capitalize }}
+                                on {{ review.date_created.strftime("%B %d, %Y") }}</em>
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+                <hr>
+            {% endfor %}
         </div>
     </div>
 

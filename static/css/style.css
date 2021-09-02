@@ -147,6 +147,10 @@ main {
     }
 }
 
+#reviews-column {
+    border-left: 2px solid purple;
+}
+
 #rating-box {
     height: 75px;
     width: 75px;
