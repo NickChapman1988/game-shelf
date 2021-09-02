@@ -152,10 +152,14 @@ main {
 }
 
 #rating-box {
-    height: 75px;
-    width: 75px;
-    border: 2px solid black;
-    border-radius: 25%;
+    height: 80px;
+    width: 80px;
+    background-color: #558b2f;
+    border-radius: 50%;
+    line-height: 27px;
+    font-size: 26px;
+    color: white;
+    font-weight: 700;
 }
 
 /* Image on game page */
