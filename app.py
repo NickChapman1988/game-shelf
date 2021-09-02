@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 @app.route("/get_catalogue")
 def get_catalogue():
     catalogue = mongo.db.catalogue.find()
-    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(6)
+    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(10)
 
     return render_template(
         "catalogue.html", catalogue=catalogue, latest_reviews=latest_reviews)
@@ -41,11 +41,15 @@ def view_game(game_id):
     reviews = list(mongo.db.reviews.find(
         {"game_title": title}).sort("date_created", -1))
 
-    ratings = 0
-    for review in reviews:
-        ratings = ratings + int(review.get("game_rating"))
+    # avoid division by zero error
+    if len(reviews) == 0:
+        average_rating = "--"
+    else:
+        ratings = 0
+        for review in reviews:
+            ratings = ratings + int(review.get("game_rating"))
 
-    average_rating = ratings / len(reviews)
+        average_rating = ratings / len(reviews)
 
     return render_template(
         "view_game.html", game=game, catalogue=catalogue,
