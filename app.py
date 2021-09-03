@@ -48,6 +48,10 @@ def view_game(game_id):
     reviews = list(mongo.db.reviews.find(
         {"game_title": title}).sort("date_created", -1))
 
+    # check if game already reviewed by user
+    existing_review = mongo.db.reviews.find_one(
+        {"game_title": title, "username": session['user']})
+
     # avoid division by zero error
     if len(reviews) == 0:
         average_rating = "--"
@@ -58,9 +62,13 @@ def view_game(game_id):
 
         average_rating = ratings / len(reviews)
 
+        # add average_rating to db
+        mongo.db.catalogue.update({"_id": ObjectId(game_id)}, {
+            "$set": {"average_rating": average_rating}})
+
     return render_template(
-        "view_game.html", game=game, catalogue=catalogue,
-        reviews=reviews, average_rating=average_rating)
+        "view_game.html", game=game, catalogue=catalogue, reviews=reviews,
+        average_rating=average_rating, existing_review=existing_review)
 
 # ------------------------------------- User Authentication -----------
 
