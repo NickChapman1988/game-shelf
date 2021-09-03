@@ -24,10 +24,10 @@
         <!--top navbar-->
         <nav class="nav-extended text-shadow deep-purple">
             <div class="nav-wrapper">
-                <a href="#" class="center-align site-name">Game Shelf</a>
+                <a href="{{ url_for('home') }}" class="center-align site-name">Game Shelf</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down text">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_catalogue') }}">Games</a></li>
                     <li><a href="#">About</a></li>
                     {% if session.user %}
@@ -45,7 +45,7 @@
         <!-- mobile sidenav-->
         <ul class="sidenav text" id="mobile-demo">
             <li><h4 class="center-align deep-purple-text page-header">Game Shelf</h4></li>
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('get_catalogue') }}">Games</a></li>
             <li><a href="#">About</a></li>
             {% if session.user %}

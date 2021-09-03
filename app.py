@@ -20,6 +20,13 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(10)
+
+    return render_template("home.html", latest_reviews=latest_reviews)
+
+
 @app.route("/get_catalogue")
 def get_catalogue():
     catalogue = mongo.db.catalogue.find()
