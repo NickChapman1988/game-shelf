@@ -150,17 +150,28 @@ def logout():
 @app.route("/add_review", methods=["GET", "POST"])
 def add_review():
     if request.method == "POST":
-        review = {
-            "username": session["user"],
-            "game_title": request.form.get("game_title"),
-            "review_title": request.form.get("review_title"),
-            "review_text": request.form.get("review_text"),
-            "date_created": datetime.now(),
-            "game_rating": request.form.get("game_rating")
-        }
-        mongo.db.reviews.insert_one(review)
-        flash("Review Added")
-        return redirect(url_for('profile', username=session['user']))
+
+        # check if game already reviewed by user
+        existing_review = mongo.db.reviews.find_one(
+            {"game_title": request.form.get(
+                "game_title"), "username": session['user']})
+
+        if existing_review:
+            flash("You've already reviewed this game!")
+            return redirect(url_for('profile', username=session['user']))
+
+        else:
+            review = {
+                "username": session["user"],
+                "game_title": request.form.get("game_title"),
+                "review_title": request.form.get("review_title"),
+                "review_text": request.form.get("review_text"),
+                "date_created": datetime.now(),
+                "game_rating": request.form.get("game_rating")
+            }
+            mongo.db.reviews.insert_one(review)
+            flash("Review Added")
+            return redirect(url_for('profile', username=session['user']))
 
     titles = mongo.db.catalogue.find().sort("game_title", 1)
     return render_template("add_review.html", titles=titles)
