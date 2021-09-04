@@ -314,7 +314,9 @@ def edit_game(game_id):
                 "publisher": request.form.get("publisher"),
                 "image_url": request.form.get("image_url"),
                 "shop_link": request.form.get("shop_link"),
-                "average_rating": "--"
+                "average_rating": mongo.db.catalogue.find_one(
+                    {"game_title": request.form.get(
+                        "game_title")})["average_rating"]
             }
 
         mongo.db.catalogue.update({"_id": ObjectId(game_id)}, submit)
