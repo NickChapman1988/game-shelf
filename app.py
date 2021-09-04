@@ -52,23 +52,9 @@ def view_game(game_id):
     existing_review = mongo.db.reviews.find_one(
         {"game_title": title, "username": session['user']})
 
-    # avoid division by zero error
-    if len(reviews) == 0:
-        average_rating = "--"
-    else:
-        ratings = 0
-        for review in reviews:
-            ratings = ratings + int(review.get("game_rating"))
-
-        average_rating = ratings / len(reviews)
-
-        # add average_rating to db
-        mongo.db.catalogue.update({"_id": ObjectId(game_id)}, {
-            "$set": {"average_rating": average_rating}})
-
     return render_template(
-        "view_game.html", game=game, catalogue=catalogue, reviews=reviews,
-        average_rating=average_rating, existing_review=existing_review)
+        "view_game.html", game=game, catalogue=catalogue,
+        reviews=reviews, existing_review=existing_review)
 
 # ------------------------------------- User Authentication -----------
 
@@ -177,8 +163,27 @@ def add_review():
                 "date_created": datetime.now(),
                 "game_rating": request.form.get("game_rating")
             }
+
+            # grab review game title
+            game_title = request.form.get("game_title")
+
             mongo.db.reviews.insert_one(review)
             flash("Review Added")
+
+            # grab updated reviews list for game
+            reviews = list(mongo.db.reviews.find({"game_title": game_title}))
+
+            # Calculate new average_rating and update db
+            if len(reviews) == 0:
+                average_rating = "--"
+            else:
+                ratings = 0
+                for review in reviews:
+                    ratings = ratings + int(review.get("game_rating"))
+                    average_rating = ratings / len(reviews)
+                    mongo.db.catalogue.update({"game_title": game_title}, {
+                        "$set": {"average_rating": average_rating}})
+
             return redirect(url_for('profile', username=session['user']))
 
     titles = mongo.db.catalogue.find().sort("game_title", 1)
