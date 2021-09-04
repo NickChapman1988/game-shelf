@@ -258,7 +258,8 @@ def add_game():
                     "artist": request.form.get("artist"),
                     "publisher": request.form.get("publisher"),
                     "image_url": request.form.get("image_url"),
-                    "shop_link": request.form.get("shop_link")
+                    "shop_link": request.form.get("shop_link"),
+                    "average_rating": "--"
                 }
 
                 mongo.db.catalogue.insert_one(game)
@@ -294,7 +295,8 @@ def edit_game(game_id):
                 "artist": request.form.get("artist"),
                 "publisher": request.form.get("publisher"),
                 "image_url": request.form.get("image_url"),
-                "shop_link": request.form.get("shop_link")
+                "shop_link": request.form.get("shop_link"),
+                "average_rating": "--"
             }
 
         mongo.db.catalogue.update({"_id": ObjectId(game_id)}, submit)
