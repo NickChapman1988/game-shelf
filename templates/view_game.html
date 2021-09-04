@@ -10,9 +10,19 @@
             <div >
                 <img id="game-image" class="col s8" src="{{ game.image_url }}">
             </div>
-            <div id="rating-box" class="col s2 center-align hexagon">
-                <p>{{ average_rating }}</p>
+            
+            <div id="rating-box" class="col s2 center-align">   
+                <label><p>{{ game.average_rating }}</p>Avg. Rating</label>   
             </div>
+            {% if existing_review %}
+            <div id="user-rating-box" class="col s2 center-align">   
+                <label><p>{{ existing_review.game_rating }}</p>Your Rating</label>   
+            </div>
+            {% else %}
+            <div id="user-rating-box" class="col s2 center-align">   
+                <label><p>--</p>Your Rating</label>   
+            </div>
+            {% endif %}
         </div>
         <div class="col s12 m6">
             <div id="game-details" class="col s12 center-align">
