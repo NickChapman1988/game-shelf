@@ -201,8 +201,26 @@ def edit_review(review_id):
             "date_created": datetime.now(),
             "game_rating": request.form.get("game_rating")
         }
+
+        # grab review game title
+        game_title = request.form.get("game_title")
+
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
+
+        # grab updated reviews list for game
+        reviews = list(mongo.db.reviews.find({"game_title": game_title}))
+        # Calculate new average_rating and update db
+        if len(reviews) == 0:
+            average_rating = "--"
+        else:
+            ratings = 0
+            for review in reviews:
+                ratings = ratings + int(review.get("game_rating"))
+                average_rating = ratings / len(reviews)
+                mongo.db.catalogue.update({"game_title": game_title}, {
+                    "$set": {"average_rating": average_rating}})
+
         return redirect(url_for('profile', username=session['user']))
 
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
