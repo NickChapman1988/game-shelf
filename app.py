@@ -29,7 +29,7 @@ def home():
 
 @app.route("/get_catalogue")
 def get_catalogue():
-    catalogue = mongo.db.catalogue.find()
+    catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(6)
 
     return render_template(
@@ -175,7 +175,7 @@ def add_review():
 
             # Calculate new average_rating and update db
             if len(reviews) == 0:
-                average_rating = "--"
+                average_rating = ""
             else:
                 ratings = 0
                 for review in reviews:
@@ -212,7 +212,7 @@ def edit_review(review_id):
         reviews = list(mongo.db.reviews.find({"game_title": game_title}))
         # Calculate new average_rating and update db
         if len(reviews) == 0:
-            average_rating = "--"
+            average_rating = ""
         else:
             ratings = 0
             for review in reviews:
@@ -277,7 +277,7 @@ def add_game():
                     "publisher": request.form.get("publisher"),
                     "image_url": request.form.get("image_url"),
                     "shop_link": request.form.get("shop_link"),
-                    "average_rating": "--"
+                    "average_rating": ""
                 }
 
                 mongo.db.catalogue.insert_one(game)

@@ -24,6 +24,7 @@
                 </thead>
                 <tbody>
                     {% for game in catalogue %}
+                    
                         <tr>
                             <td>
                                 {{ rank }}
@@ -39,7 +40,7 @@
                                 <p class="game-description">{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}
-                                <td class="center-align">8</td>
+                                <td class="center-align">--</td>
                             {% endif %}
                             <td class="center-align">{{ game.average_rating }}</td>
                             <td>
@@ -50,6 +51,7 @@
                                 {% endif %}
                             </td>    
                         </tr>
+                        
                     {% endfor %}     
                 </tbody>
             </table>
