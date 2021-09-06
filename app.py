@@ -287,7 +287,7 @@ def add_game():
                     "publisher": request.form.get("publisher"),
                     "image_url": request.form.get("image_url"),
                     "shop_link": request.form.get("shop_link"),
-                    "average_rating": ""
+                    "average_rating": 0
                 }
 
                 mongo.db.catalogue.insert_one(game)

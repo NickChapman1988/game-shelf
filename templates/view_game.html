@@ -10,10 +10,20 @@
             <div >
                 <img id="game-image" class="col s8" src="{{ game.image_url }}">
             </div>
-            
-            <div id="rating-box" class="col s2 center-align">   
-                <label><p>{{ game.average_rating }}</p>Avg. Rating</label>   
+            {% if game.average_rating != 0 %}
+            <div id="rating-box" class="col s2 center-align">
+                <label>
+                    <p>{{ game.average_rating }}</p>Avg. Rating
+                </label>
             </div>
+            {% else %}
+            <div id="rating-box" class="col s2 center-align">
+                <label>
+                    <p>--</p>Avg. Rating
+                </label>
+            </div>
+            {% endif %}
+                
             {% if existing_review %}
             <div id="user-rating-box" class="col s2 center-align">   
                 <label><p>{{ existing_review.game_rating }}</p>Your Rating</label>   
@@ -62,9 +72,12 @@
                 <div class="col s6">
                     <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
                 </div>
-                <div class="col s6">
-                    <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
-                </div>
+                <!-- Only allow registered users to review -->
+                
+                    <div class="col s6">
+                        <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
+                    </div>
+                
             {% endif %}
         </div>
     </div>

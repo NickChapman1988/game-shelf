@@ -14,7 +14,7 @@
                 <thead>
                     <tr>
                         <th>Rank</th>
-                        <th></th>
+                        <th><!-- Thumbnail --></th>
                         <th>Title</th>
                         {% if session.user %}
                             <th>Your Rating</th>
@@ -25,12 +25,10 @@
                 </thead>
                 <tbody>
                     {% for game in catalogue %}
-                    
                         <tr>
                             <td>
                                 {{ rank }}
                             </td>
-                            
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}">
                                     <img class="game-thumbnail" src="{{ game.image_url }}">
@@ -43,10 +41,18 @@
                             {% if session.user %}
                                 <td class="center-align">--</td>
                             {% endif %}
-                            <td class="center-align">{{ game.average_rating }}</td>
+                            {% if game.average_rating != 0 %}
+                                <td class="center-align">{{ game.average_rating }}</td>
+                            {% else %}
+                                <td class="center-align">--</td>
+                            {% endif %}
                             <td>
                                 <a href="{{ game.shop_link }}" target="_blank" class="btn-small light-green darken-3">Buy</a>
-                                <a href="{{ url_for('add_review') }}" class="btn-small purple lighten-2">Review</a>
+                                <!-- Only allow registered users to review -->
+                                {% if session.user %}
+                                    <a href="{{ url_for('add_review') }}" class="btn-small purple lighten-2">Review</a>
+                                {% endif %}
+        
                                 {% if session.user|lower == "admin"|lower %}
                                     <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit Game</a>
                                 {% endif %}
