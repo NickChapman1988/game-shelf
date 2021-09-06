@@ -36,6 +36,16 @@ def get_catalogue():
         "catalogue.html", catalogue=catalogue, latest_reviews=latest_reviews)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    catalogue = list(mongo.db.catalogue.find({"$text": {"$search": query}}))
+    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(6)
+
+    return render_template(
+        "search.html", catalogue=catalogue, latest_reviews=latest_reviews)
+
+
 @app.route("/view_game/<game_id>")
 def view_game(game_id):
     catalogue = mongo.db.catalogue.find()

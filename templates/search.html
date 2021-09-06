@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align deep-purple-text page-header">
+        <hr>
+        Search Results
+        <hr>
+    </h3>
+
+    {% if catalogue|length > 0 %}
+    <div class="row">
+        <div class="col s12 l9">
+            <table id="games-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th></th>
+                        <th>Title</th>
+                        {% if session.user %}
+                            <th>Your Rating</th>
+                        {% endif %}
+                        <th>Avg. Rating</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for game in catalogue %}
+                    
+                        <tr>
+                            <td>
+                                {{ rank }}
+                            </td>
+                            
+                            <td>
+                                <a href="{{ url_for('view_game', game_id=game._id) }}">
+                                    <img class="game-thumbnail" src="{{ game.image_url }}">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ url_for('view_game', game_id=game._id) }}" class="deep-purple-text"><strong>{{ game.game_title }}</strong></a>
+                                <p class="game-description">{{ game.game_description }}</p>
+                            </td>
+                            {% if session.user %}
+                                <td class="center-align">--</td>
+                            {% endif %}
+                            <td class="center-align">{{ game.average_rating }}</td>
+                            <td>
+                                <a href="{{ game.shop_link }}" target="_blank" class="btn-small light-green darken-3">Buy</a>
+                                <a href="{{ url_for('add_review') }}" class="btn-small purple lighten-2">Review</a>
+                                {% if session.user|lower == "admin"|lower %}
+                                    <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit Game</a>
+                                {% endif %}
+                            </td>    
+                        </tr>
+                        
+                    {% endfor %}     
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+            <h3 class="center-align red-text text">No Results Found</h3>
+        {% endif %}
+
+        <div class="col l3" id="reviews-column">
+            <h4 class="center-align deep-purple-text page-header">
+                Latest Reviews
+            </h4>
+            {% for review in latest_reviews %}
+                <!-- Review Title -->
+                <div class="row latest-reviews">
+                    <div class="col l12">
+                        <div class="card-panel review-card">
+                            <h5 class="deep-purple-text">
+                                {{ review.review_title}}
+                            </h5>
+                            <h6>
+                                {{ review.game_title }}
+                            </h6>
+                            <strong>Rating: {{ review.game_rating }}</strong>
+                            <p>
+                                {{ review.review_text }}
+                            </p>
+                            <p>
+                                <em>Written by {{ review.username|capitalize }}</em>
+                            </p>
+                            <p>
+                                <em>{{ review.date_created.strftime("%B %d, %Y") }}</em>
+                            </p>
+                        </div>
+                    </div>                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

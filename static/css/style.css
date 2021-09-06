@@ -97,7 +97,7 @@ main {
 }
 
 #image-gallery {
-    margin: 10px 0;
+    margin-bottom: 10px;
     padding: 0;
     background-image: url("https://pbs.twimg.com/media/E9PSDuNWUAgCe5V?format=jpg&name=small");
     width: 100%;

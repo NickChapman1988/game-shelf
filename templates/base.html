@@ -25,7 +25,7 @@
         <nav class="nav-extended text-shadow deep-purple">
             <div class="nav-wrapper">
                 <a href="{{ url_for('home') }}" class="center-align site-name">Game Shelf</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>             
                 <ul class="right hide-on-med-and-down text">
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_catalogue') }}">Games</a></li>
@@ -36,8 +36,17 @@
                     {% else %}
                         <li><a href="{{ url_for('login') }}">Login</a></li>
                         <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}    
-                    <li><a href="#">Search</a></li>
+                    {% endif %} 
+                    <li>
+                        <form action="{{ url_for('search') }}" method="POST">
+                            <div class="input-field">
+                                <i class="fas fa-search prefix"></i>
+                                <input type="text" name="query" id="query" class="validate">
+                                <label for="query"></label>
+                                <i class="fas fa-times right"></i>
+                            </div>  
+                        </form>
+                    </li>                
                 </ul>
             </div>
         </nav>
@@ -55,7 +64,16 @@
                 <li><a href="{{ url_for('login') }}">Login</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}    
-            <li><a href="#">Search</a></li>
+            <li>
+                <form action="{{ url_for('search') }}" method="POST">
+                    <div class="input-field">
+                        <i class="fas fa-search prefix"></i>
+                        <input type="text" name="query" id="query" class="validate">
+                        <label for="query"></label>
+                        <i class="fas fa-times right"></i>
+                    </div>
+                </form>
+            </li>
         </ul>
     </header>
 
