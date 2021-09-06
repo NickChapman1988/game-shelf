@@ -114,6 +114,53 @@ main {
     line-height: 42px;
 }
 
+#mobile-demo {
+    padding-left: 15px;
+}
+
+/*--------------------------- Search Box -------------*/
+
+#query {
+    height: 33px;
+    width: 240px;
+    background-color: white;
+    margin: 16px 5px;
+    padding-left: 30px;
+}
+
+#search-box, #search-box-mob {
+    position: relative;
+}
+
+#search-icon {
+    color: #673ab7;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 8px;
+}
+
+#clear-icon {
+    color: #673ab7;
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+#search-icon-mob {
+    color: #673ab7;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+
+#clear-icon-mob {
+    color: #673ab7;
+    font-size: 20px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+
 /*--------------------------------- Footer -----------------------*/
 
 .page-footer {

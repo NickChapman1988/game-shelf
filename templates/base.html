@@ -38,14 +38,16 @@
                         <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %} 
                     <li>
-                        <form action="{{ url_for('search') }}" method="POST">
-                            <div class="input-field">
-                                <i class="fas fa-search prefix"></i>
-                                <input type="text" name="query" id="query" class="validate">
-                                <label for="query"></label>
-                                <i class="fas fa-times right"></i>
-                            </div>  
-                        </form>
+                        <div class="search-wrapper">
+                            <form action="{{ url_for('search') }}" method="POST">
+                                <div class="input-field" id="search-box">
+                                    <i class="fas fa-search prefix" id="search-icon"></i>
+                                    <input type="text" name="query" id="query" class="validate" aria-label="Search">
+                                    <i class="fas fa-times" id="clear-icon"></i>
+                                    <label class="label-icon" for="query"></label>      
+                                </div>    
+                            </form>
+                        </div>
                     </li>                
                 </ul>
             </div>
@@ -66,12 +68,12 @@
             {% endif %}    
             <li>
                 <form action="{{ url_for('search') }}" method="POST">
-                    <div class="input-field">
-                        <i class="fas fa-search prefix"></i>
-                        <input type="text" name="query" id="query" class="validate">
-                        <label for="query"></label>
-                        <i class="fas fa-times right"></i>
-                    </div>
+                    <div class="input-field" id="search-box-mob">
+                        <i class="fas fa-search prefix" id="search-icon-mob"></i>
+                        <input type="text" name="query" id="query" class="validate" aria-label="Search">
+                        <i class="fas fa-times" id="clear-icon-mob"></i>
+                        <label class="label-icon" for="query"></label>      
+                    </div> 
                 </form>
             </li>
         </ul>
