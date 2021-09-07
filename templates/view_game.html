@@ -64,21 +64,18 @@
     <hr>
     <div class="row">
         <div id="button-box" class="col s12 center-align">
-            {% if existing_review %}
-                <div class="col s6 push-s3">
-                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
-                </div>
-            {% else %}
-                <div class="col s6">
-                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
-                </div>
-                <!-- Only allow registered users to review -->
-                
+                {% if existing_review %}
+                    <div class="col s6 push-s3">
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                    </div>
+                {% else %}
+                    <div class="col s6">
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                    </div>                
                     <div class="col s6">
                         <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
                     </div>
-                
-            {% endif %}
+                {% endif %}
         </div>
     </div>
     <div id="long-description">

@@ -46,3 +46,8 @@ function validateMaterializeSelect() {
         }
     });
 }
+
+// Search bar clear icon
+function clearSearch(){
+    document.getElementById("query").value = "";
+}
