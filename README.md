@@ -199,7 +199,9 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 * Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
 * Pagination on Games page adapted from [this demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) by Huang Huang on GitHub. Thanks to Krisztina Sarolta Szabo on Slack for the link.
 * Seach bar clear icon adapted from [this answer](https://stackoverflow.com/a/33683886) by Josh Crozier on Stack Overflow.
+* 'Delete Review' modal thanks to Ed Bradley and Gwen Bradbury on Slack for [this walkthrough](https://code-institute-room.slack.com/archives/C7JQY2RHC/p1608734268405400)
   
 
 ## Acknowledgements
+* Thanks to Gwen Bradbury and Ed Bradley on Slack for tackling the 'defensive programming' modal
 

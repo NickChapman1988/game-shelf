@@ -9,6 +9,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     // Materialize Select input for review page
     $('select').formSelect();
+    $('.modal').modal();
 });
 
 /*
