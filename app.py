@@ -224,7 +224,8 @@ def edit_review(review_id):
             "game_title": request.form.get("game_title"),
             "review_title": request.form.get("review_title"),
             "review_text": request.form.get("review_text"),
-            "date_created": datetime.now(),
+            "date_created": mongo.db.reviews.find_one(
+                {"_id": ObjectId(review_id)})["date_created"],
             "game_rating": request.form.get("game_rating")
         }
 
