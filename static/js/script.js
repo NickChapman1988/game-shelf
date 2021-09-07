@@ -52,6 +52,7 @@ function clearSearch(){
     document.getElementById("query").value = "";
 }
 
+// Adapted from Josh Crozier on Stack Overflow
 Array.prototype.forEach.call(document.querySelectorAll('.clearable-input'), function(el) {
     var input = el.querySelector('input');
     conditionallyHideClearIcon();

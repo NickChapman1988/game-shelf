@@ -41,7 +41,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
     -   #### Frequent User Goals
 
         1. As a Frequent User, I want to check to see if there are any new reviews or new games added.
-        2. As a Frequent User, I want to organise the games I own on my profile.
+        2. As a Frequent User, I want to organise reviews I've written on my profile.
 
     -   #### Site Owner Goals
 
@@ -57,10 +57,31 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 ## Surface
 
 ### Images
-### Colours
-### Typography
-### Icons
+* Header images are by [Ross Connell](https://www.moregamesplease.com/) for premium, professional board game photography. 
+* Footer image is 'Coloured Pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+### Colours
+* Colours were largely chosen from the Materialize Color Palette for ease of implementation. Plump Purple/Deep Purple (#673AB7) was chosen as the main site brand colour, with white as the main background colour to provide plenty of contrast for darker elements and text.
+![Image](static/images/main-palette.png) 
+
+* Plump Purple (#673AB7) - Main brand colour
+* White (#FFFFFF) - Main background colour
+* Black (#000000) - Main text colour
+
+* The site features several different button types for different functions, so it was important to differentiate these with different colours. 'Buy' buttons were coloured with 'Maximum Green' (#558B2F) to convey a 'positive' impression and encourage clicks. 'Fuchsia Crystal' (#BA68C8) was used for Add/Edit Review buttons to stand out from the 'Buy' buttons while also tying in with the main site purple colour. 'Ruby' (#D81B60) was used for 'Delete' buttons to convey a user warning. 'Light Sky Blue' (#90CAF9) was used for Add/Edit Game buttons to differentiate from the 'Review' buttons
+
+![Image](static/images/buttons.png)
+
+* Maximum Green #558B2F
+* Fuchsia Crystal #BA68C8
+* Ruby #D81B60
+* Light Sky Blue #90CAF9
+
+### Typography
+* I used Google Fonts to browse interesting fonts. 'Syncopate' was used for headings as it is clear and easy to read but in keeping with the 'gaming' theme. 'Raleway' was used for the bulk of the page text, as it pairs well with 'Syncopate' and presents an easy-to-read larger character font.
+
+### Icons
+* Icons were used to aid visual user navigation and make forms as intuitive as possible. All icons are provided by Font Awesome.
 
 ## Features
 
@@ -79,11 +100,12 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 
-#### Libraries:
+#### Libraries & Frameworks:
 * [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes.
-* [FontAwesome](https://fontawesome.com/) - Used for the nav bar toggler icon.
+* [FontAwesome](https://fontawesome.com/) - Used for all form icons, as well as search bar and menu toggle icons.
 * [JQuery](https://jquery.com) - The project uses JQuery to simplify DOM manipulation.
 * [GoogleFonts](https://fonts.google.com/) - 'Syncopate' and 'Raleway' fonts.
+* [Materialize](https://materializecss.com/) - Modern responsive front-end framework based on Material Design, used to construct the majority of visual elements of the site.
 
 #### Version Control:
 * [Github](https://github.com/) - Used to store the code 
@@ -172,8 +194,11 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
-* Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
+* Header images are by [Ross Connell](https://www.moregamesplease.com/), used with permission. 
 * Footer image 'colored pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+* Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
+
+* Seach bar clear icon adapted from [this answer](https://stackoverflow.com/a/33683886) by Josh Crozier on Stack Overflow.
   
 
 ## Acknowledgements
