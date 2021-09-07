@@ -187,10 +187,7 @@ main {
     color: #673ab7;
 }
 
-/*-----------------------------*/
-.review-box {
-    margin-bottom: 5px;
-} 
+/*------------------------- Games Catalogue ----*/
 
 #games-table {
     display: block;
@@ -212,7 +209,7 @@ main {
 }
 
 #reviews-column {
-    border-left: 2px solid purple;
+    border-left: 2px solid #673AB7;
 }
 
 @media only screen and (max-width: 992px){
@@ -226,6 +223,13 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.pagination li.active a {
+    background-color: #673AB7;
+    border-radius: 10%;
+}
+
+/*---------------------------- Individual Game Pages ------------*/
 
 #rating-box, #user-rating-box {
     height: 80px;
@@ -246,11 +250,14 @@ main {
     font-weight: 700;
 }
 
-
-
 /* Image on game page */
 #game-image {
     max-width: 200px;
     max-height: 200px;
     object-fit: cover;
+}
+
+/*------------------------- Profile -------------*/
+.review-box {
+    margin-bottom: 5px;
 }
