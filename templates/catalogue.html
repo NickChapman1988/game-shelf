@@ -26,7 +26,7 @@
                     {% for game in catalogue %}
                         <tr>
                             <td>
-                                {{ rank }}
+                                {{ loop.index + (page - 1) * per_page }}
                             </td>
                             
                             <td>
@@ -92,6 +92,10 @@
                 </div>
             {% endfor %}
         </div>
+    </div>
+
+    <div class="container">        
+        {{ pagination.links }}
     </div>
 
 {% endblock %}
