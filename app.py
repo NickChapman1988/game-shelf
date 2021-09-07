@@ -18,10 +18,10 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
 
 
 def get_games(offset=0, per_page=10):
+    catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
     return catalogue[offset: offset + per_page]
 
 
@@ -56,7 +56,7 @@ def get_catalogue(offset=0, per_page=10):
 def search():
     query = request.form.get("query")
     catalogue = list(mongo.db.catalogue.find({"$text": {"$search": query}}))
-    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(6)
+    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
 
     return render_template(
         "search.html", catalogue=catalogue, latest_reviews=latest_reviews)

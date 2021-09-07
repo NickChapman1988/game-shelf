@@ -197,7 +197,7 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 * Header images are by [Ross Connell](https://www.moregamesplease.com/), used with permission. 
 * Footer image 'colored pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 * Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
-
+* Pagination on Games page adapted from [this demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) by Huang Huang on GitHub. Thanks to Krisztina Sarolta Szabo on Slack for the link.
 * Seach bar clear icon adapted from [this answer](https://stackoverflow.com/a/33683886) by Josh Crozier on Stack Overflow.
   
 

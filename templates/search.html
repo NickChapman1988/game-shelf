@@ -63,9 +63,7 @@
                 </tbody>
             </table>
         </div>
-        {% else %}
-            <h3 class="center-align red-text text">No Results Found</h3>
-        {% endif %}
+        
 
         <div class="col l3" id="reviews-column">
             <h4 class="center-align deep-purple-text page-header">
@@ -98,5 +96,8 @@
             {% endfor %}
         </div>
     </div>
+    {% else %}
+        <h3 class="center-align red-text text">No Results Found</h3>
+    {% endif %}
 
 {% endblock %}
