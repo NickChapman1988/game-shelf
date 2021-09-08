@@ -23,7 +23,9 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
                     {% for game in catalogue %}
+                        
                         <tr>
                             <td>
                                 {{ loop.index + (page - 1) * per_page }}
@@ -38,9 +40,13 @@
                                 <a href="{{ url_for('view_game', game_id=game._id) }}" class="deep-purple-text"><strong>{{ game.game_title }}</strong></a>
                                 <p class="game-description">{{ game.game_description }}</p>
                             </td>
-                            {% if session.user %}
-                                <td class="center-align">--</td>
-                            {% endif %}
+                            {% if session.user %}               
+                                {% for review in reviews %}
+                                    {% if game.game_title == review.game_title %}                
+                                        <td class="center-align">{{ review.game_rating }}</td> 
+                                    {% endif %}      
+                                {% endfor %}                 
+                            {% endif %}                            
                             {% if game.average_rating != 0 %}
                                 <td class="center-align">{{ game.average_rating }}</td>
                             {% else %}

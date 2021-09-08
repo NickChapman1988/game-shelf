@@ -39,6 +39,9 @@ def get_catalogue(offset=0, per_page=10):
     catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
 
+    # grab user reviews
+    reviews = list(mongo.db.reviews.find({"username": session['user']}))
+
     # Pagination from 'flask-paginate demo' by Huang Huang on Github
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page')
@@ -50,7 +53,7 @@ def get_catalogue(offset=0, per_page=10):
     return render_template(
         "catalogue.html", catalogue=pagination_games,
         page=page, per_page=per_page, pagination=pagination,
-        latest_reviews=latest_reviews)
+        latest_reviews=latest_reviews, reviews=reviews)
 
 
 @app.route("/search", methods=["GET", "POST"])
