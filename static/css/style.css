@@ -196,8 +196,8 @@ main {
 
 /* Image on catalogue page */
 .game-thumbnail {
-        max-width: 100px;
-        max-height: 100px; 
+        max-width: 64px;
+        max-height: 64px; 
         object-fit: cover;
 }
 

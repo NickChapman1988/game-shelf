@@ -23,14 +23,20 @@
                 </label>
             </div>
             {% endif %}
-            {% if existing_review %}
-            <div id="user-rating-box" class="col s2 center-align">   
-                <label><p>{{ existing_review.game_rating }}</p>Your Rating</label>   
-            </div>
+            {% if 'user' in session %}
+                {% if existing_review == 1 %}
+                    <!-- Display to registered users without review -->
+                    <div id="user-rating-box" class="col s2 center-align">   
+                        <label><p>--</p>Your Rating</label>   
+                    </div>
+                {% else %}
+                    <!-- Display to registered users with review -->
+                    <div id="user-rating-box" class="col s2 center-align">   
+                        <label><p>{{ existing_review.game_rating }}</p>Your Rating</label>   
+                    </div>
+                {% endif %}
             {% else %}
-            <div id="user-rating-box" class="col s2 center-align">   
-                <label><p>--</p>Your Rating</label>   
-            </div>
+                    <!-- Not displayed for unregistered users -->
             {% endif %}
         </div>
         <div class="col s12 m6">
@@ -63,18 +69,28 @@
     <hr>
     <div class="row">
         <div id="button-box" class="col s12 center-align">
-                {% if existing_review %}
-                    <div class="col s6 push-s3">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
-                    </div>
-                {% else %}
+            
+            {% if 'user' in session %}
+                {% if existing_review == 1 %}
+                    <!-- Display to registered users without review -->
                     <div class="col s6">
                         <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
                     </div>                
                     <div class="col s6">
                         <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
                     </div>
+                {% else %}
+                    <!-- Display to registered users with review -->
+                    <div class="col s6 push-s3">
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                    </div>
                 {% endif %}
+            {% else %}
+                <!-- Display to unregistered users -->                
+                <div class="col s6 push-s3">
+                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                </div>
+            {% endif %}
         </div>
     </div>
     <div id="long-description">

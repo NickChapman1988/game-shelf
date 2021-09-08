@@ -2,8 +2,8 @@ import os
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
-from flask_paginate import Pagination, get_page_args
 from flask_pymongo import PyMongo
+from flask_paginate import Pagination, get_page_args
 from bson.objectid import ObjectId
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -39,6 +39,7 @@ def get_catalogue(offset=0, per_page=10):
     catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
 
+    # Pagination from 'flask-paginate demo' by Huang Huang on Github
     page, per_page, offset = get_page_args(
         page_parameter='page', per_page_parameter='per_page')
     total = len(catalogue)
@@ -74,9 +75,17 @@ def view_game(game_id):
     reviews = list(mongo.db.reviews.find(
         {"game_title": title}).sort("date_created", -1))
 
-    # check if game already reviewed by user
-    existing_review = mongo.db.reviews.find_one(
-        {"game_title": title, "username": session['user']})
+    # set default value for non-logged in users
+    existing_review = 0
+
+    # if viewer is logged in
+    if 'user' in session:
+        # check if game already reviewed by user
+        existing_review = mongo.db.reviews.find_one(
+            {"game_title": title, "username": session['user']})
+        if existing_review is None:
+            # set default for users who haven't reviewed
+            existing_review = 1
 
     return render_template(
         "view_game.html", game=game, catalogue=catalogue,
