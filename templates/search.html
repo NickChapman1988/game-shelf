@@ -13,7 +13,6 @@
             <table id="games-table">
                 <thead>
                     <tr>
-                        <th>Rank</th>
                         <th><!-- Thumbnail --></th>
                         <th>Title</th>
                         {% if session.user %}
@@ -26,9 +25,6 @@
                 <tbody>
                     {% for game in catalogue %}
                         <tr>
-                            <td>
-                                {{ rank }}
-                            </td>
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}">
                                     <img class="game-thumbnail" src="{{ game.image_url }}">
