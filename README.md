@@ -212,4 +212,5 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Acknowledgements
 * Thanks to Gwen Bradbury and Ed Bradley on Slack for tackling the 'defensive programming' modal
+* Huge thanks to Sean Murphy, Miklos Sarosi, and especially Jo Heyndels from Tutor Support for their patience, support and tutoring!
 
