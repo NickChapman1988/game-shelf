@@ -38,16 +38,17 @@ def get_catalogue(offset=0, per_page=10):
     catalogue = list(mongo.db.catalogue.find().sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
 
-    reviews = mongo.db.reviews.find({"username": session["user"]})
+    if 'user' in session:
+        reviews = mongo.db.reviews.find({"username": session["user"]})
 
-    for review in reviews:
+        for review in reviews:
+            for index, game in enumerate(catalogue):
+                if game['game_title'] == review['game_title']:
+                    catalogue[index]['game_rating'] = review['game_rating']
+
         for index, game in enumerate(catalogue):
-            if game['game_title'] == review['game_title']:
-                catalogue[index]['game_rating'] = review['game_rating']
-
-    for index, game in enumerate(catalogue):
-        if game.get('game_rating') is None:
-            catalogue[index]['game_rating'] = "--"
+            if game.get('game_rating') is None:
+                catalogue[index]['game_rating'] = "--"
 
     # Pagination from 'flask-paginate demo' by Huang Huang on Github
     page, per_page, offset = get_page_args(
