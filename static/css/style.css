@@ -187,6 +187,11 @@ main {
     color: #673ab7;
 }
 
+/*------------------------- Home Page -----------*/
+.welcome-text {
+    font-size: 18px;
+}
+
 /*------------------------- Games Catalogue ----*/
 
 #games-table {
