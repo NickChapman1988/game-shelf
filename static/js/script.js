@@ -10,6 +10,9 @@ $(document).ready(function(){
     // Materialize Select input for review page
     $('select').formSelect();
     $('.modal').modal();
+    setTimeout(function(){
+        $('.flashes').remove();
+      }, 3000);
 });
 
 /*

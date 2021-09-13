@@ -79,7 +79,11 @@
             </li>
         </ul>
     </header>
-
+    <section id="image-row" class="row">   
+        <div id="image-gallery" class="col s12 image-gallery">
+            <!-- Header Image -->
+        </div>   
+    </section>
     <section>
         <!-- flash messages-->
         {% with messages = get_flashed_messages() %}
@@ -94,15 +98,6 @@
             {% endif %}
         {% endwith %}
     </section>
-
-    <section id="image-row" class="row">
-        
-        <div id="image-gallery" class="col s12 image-gallery">
-                       
-        </div>
-        
-    </section>
-
     <main class="container text">
         {% block content %}
         {% endblock %}
