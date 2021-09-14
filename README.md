@@ -1,8 +1,10 @@
 # Game Shelf
-### View the live project [here.](https://nick-game-shelf.herokuapp.com/)
 
 Game Shelf is a site that hopes to provide easily accessible reviews and details of tabletop board games. The site will be targeted towards existing tabletop board game players and collectors who are looking for new games to play and collect, but also aimed at new gamers who may not know where to start. Game Shelf will be useful for gamers to find detailed reviews of games they may be interested in, and allow them to find all the necessary details of games.
 
+![Image](static/images/home-screenshot.png)
+
+### [See live site.](https://nick-game-shelf.herokuapp.com/)
 
 ## Table of Contents
 
@@ -49,10 +51,18 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
  
 ## Scope
+* 
 
 ## Structure
+The website is split into four main sections - a home (landing) page, a games catalogue page, an about page and user profile page. The fixed navbar allows the user to easily navigate the site, and presents a consistent layout, while the toggle feature makes the navbar more accessible for mobile and tablet devices whilst maintaining consistent positioning. The Home page displays a prominent header image and site message, with further information accessible on the About page. The Games page is clean and simple, ranking the games based on average user rating. Each game on the Games page links to individual games pages with additional information on each game. The About page provides users an easy way to give feedback and contact the site owner. The Profile page contains the primary CRUD functionality, with users able to add, read, edit and delete their own reviews for games. 
 
 ## Skeleton
+
+* Home Page: <a href="#" target="_blank">Home</a>
+* Games Page: <a href="#" target="_blank">Games</a>
+* Individual Games Page: <a href="#" target="_blank">Game Pages</a>
+* About Page: <a href="#" target="_blank">About</a>
+* Profile Page: <a href="#" target="_blank">Profile</a>
 
 ## Surface
 
@@ -98,11 +108,13 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+* [MongoDB](https://en.wikipedia.org/wiki/MongoDB)
 
 #### Libraries & Frameworks:
-* [Balsamiq](https://balsamiq.com/) - used for the creation of wireframes.
+* [Balsamiq](https://balsamiq.com/) - Used for the creation of wireframes.
 * [FontAwesome](https://fontawesome.com/) - Used for all form icons, as well as search bar and menu toggle icons.
+* [Lucid](https://lucid.co/) - Used to map out user interaction and CRUD functionality. 
 * [JQuery](https://jquery.com) - The project uses JQuery to simplify DOM manipulation.
 * [GoogleFonts](https://fonts.google.com/) - 'Syncopate' and 'Raleway' fonts.
 * [Materialize](https://materializecss.com/) - Modern responsive front-end framework based on Material Design, used to construct the majority of visual elements of the site.
