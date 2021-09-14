@@ -28,9 +28,8 @@
                         
                         <tr>
                             <td>
-                                {{ loop.index + (page - 1) * per_page }}
+                               {{ loop.index + (page - 1) * per_page }}
                             </td>
-                            
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}">
                                     <img class="game-thumbnail" src="{{ game.image_url }}">
