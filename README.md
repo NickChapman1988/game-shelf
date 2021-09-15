@@ -54,6 +54,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 * 
 
 ## Structure
+
 The website is split into four main sections - a home (landing) page, a games catalogue page, an about page and user profile page. The fixed navbar allows the user to easily navigate the site, and presents a consistent layout, while the toggle feature makes the navbar more accessible for mobile and tablet devices whilst maintaining consistent positioning. The Home page displays a prominent header image and site message, with further information accessible on the About page. The Games page is clean and simple, ranking the games based on average user rating. Each game on the Games page links to individual games pages with additional information on each game. The About page provides users an easy way to give feedback and contact the site owner. The Profile page contains the primary CRUD functionality, with users able to add, read, edit and delete their own reviews for games. 
 
 ## Skeleton
@@ -72,6 +73,7 @@ The website is split into four main sections - a home (landing) page, a games ca
 
 ### Colours
 * Colours were largely chosen from the Materialize Color Palette for ease of implementation. Plump Purple/Deep Purple (#673AB7) was chosen as the main site brand colour, with white as the main background colour to provide plenty of contrast for darker elements and text.
+
 ![Image](static/images/main-palette.png) 
 
 * Plump Purple (#673AB7) - Main brand colour
@@ -94,6 +96,37 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Icons were used to aid visual user navigation and make forms as intuitive as possible. All icons are provided by Font Awesome.
 
 ## Features
+#### Navbar
+* I wanted users to easily be able to navigate the site from every page.
+* The navbar resizes responsively into a toggle button at smaller screen sizes, to enable users to still navigate their way around the site.
+* The navbar uses a colour change hover effect on the other links whilst navigating to a new page.
+* The user can click on site title to take the user back to the Home page.
+* The search box allows users to quickly search the games catalogue.
+
+#### Home 
+* Contains prominent header image and direct site message to immediately catch user's attention and indicate the site's purpose.
+
+#### Games
+* Lists games in order of average user rating, so users can easily see which games have highest ratings.
+* 'Buy' button for each game links to external affiliate link 
+* 'Add Review' button allows users to quickly and easily add reviews for games directly from Games page
+* 'Edit Game' button for 'admin' users to quickly and easily update games in the database.
+
+#### Individual Games Pages
+* Displays game cover art
+* Prominently displays average game rating, as well as user rating when applicable. 
+* Displays full game details, detailed description and all reviews for each game. 
+
+#### About
+* Details what the site is about and how to use the site. 
+
+#### Profile
+* Allows users add, edit, read and delete their reviews.
+* Allows 'admin' users to add new games to the database.
+
+#### Footer
+* Provide links to social media with handy icons for easy navigation
+
 
 ### Existing Features
 
