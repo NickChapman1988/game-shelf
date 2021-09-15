@@ -8,18 +8,24 @@
     <div class="row">
         <div class="col s12 m6">
             <div >
-                <img id="game-image" class="col s8" src="{{ game.image_url }}">
+                <img id="game-image" class="col s8" src="{{ game.image_url }}" alt="{{ game.game_title.lower() }}-thumbnail">
             </div>
             {% if game.average_rating != 0 %}
             <div id="rating-box" class="col s2 center-align">
+                <p>
+                    {{ game.average_rating }}
+                </p>
                 <label>
-                    <p>{{ game.average_rating }}</p>Avg. Rating
+                    Avg. Rating
                 </label>
             </div>
             {% else %}
             <div id="rating-box" class="col s2 center-align">
+                <p>
+                    --
+                </p>
                 <label>
-                    <p>--</p>Avg. Rating
+                    Avg. Rating
                 </label>
             </div>
             {% endif %}
@@ -27,12 +33,22 @@
                 {% if existing_review == 1 %}
                     <!-- Display to registered users without review -->
                     <div id="user-rating-box" class="col s2 center-align">   
-                        <label><p>--</p>Your Rating</label>   
+                        <p>
+                            --
+                        </p>
+                        <label>
+                            Your Rating
+                        </label>   
                     </div>
                 {% else %}
                     <!-- Display to registered users with review -->
                     <div id="user-rating-box" class="col s2 center-align">   
-                        <label><p>{{ existing_review.game_rating }}</p>Your Rating</label>   
+                        <p>
+                            {{ existing_review.game_rating }}
+                        </p>
+                        <label>
+                            Your Rating
+                        </label>   
                     </div>
                 {% endif %}
             {% else %}
@@ -52,7 +68,7 @@
         <div id="game-stats" class="col s12">
             <div class="center-align">
                 <div class="col s6 m4">
-                    <strong><h6>Player Count:</h6></strong>
+                    <h6>Player Count:</h6>
                     <p>{{ game.min_player_count }} - {{ game.max_player_count }}</p>
                 </div>
                 <div class="col s6 m4">

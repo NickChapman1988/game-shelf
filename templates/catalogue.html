@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-
-    <h3 class="center-align deep-purple-text page-header">
-        <hr>
-        Games
-        <hr>
-    </h3>
-
+    <hr>
+        <h3 class="center-align deep-purple-text page-header">
+            Games
+        </h3>
+    <hr>
+    
     <div class="row">
         <div class="col s12 l9">
             <table id="games-table">
@@ -32,7 +31,7 @@
                             </td>
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}">
-                                    <img class="game-thumbnail" src="{{ game.image_url }}">
+                                    <img class="game-thumbnail" src="{{ game.image_url }}" alt="{{ game.game_title.lower() }}-thumbnail">
                                 </a>
                             </td>
                             <td>
@@ -63,7 +62,7 @@
             </table>
             <!-- Pagination -->
             <div class="container center-align">     
-                <span id="pagination-buttons">{{ pagination.links }}</span>
+                <div id="pagination-buttons">{{ pagination.links }}</div>
             </div>
         </div>
         

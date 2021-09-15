@@ -166,8 +166,34 @@ The website is split into four main sections - a home (landing) page, a games ca
 ---
 
 ## Testing
+* Forms testing: to ensure the website was functioning as it should, I tested each of the forms on different devices and browsers. This was done by clicking the 'Submit' 
+button on the Contact Form without any text in inputs to make sure it resulted with the desired response of 'Please fill out this field'.
+* Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, I made sure 
+each link has either a colour change or colour-changing icon when hovered (with exception of the logo when visible) and included a target="_blank" attribute so that a new 
+browser tab is opened when clicked.
+
+* Testing across various devices: I used BrowserStack for this, in addition to feedback from my friends and peers. The devices on which the website was tested are as follows:
+
+* Tested on Chrome, Firefox, Safari and Microsoft Edge
+
+* Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
+
 
 #### Validation
+HTML - [W3C](https://validator.w3.org/) - Markup Validation
+![Image]()
+
+
+CSS - [W3C](https://jigsaw.w3.org/css-validator/) - CSS Validation
+
+![Image](static/images/css-validation.png)
+
+
+Javascript - [JSHint](https://jshint.com/) - Javascript Validation
+
+![Image](static/images/js-validation.png)
+
+Python - 
 
 #### Project Bugs and Solutions
 * CSS for page overflow and x-scrolling meant the games catalogue table was cutting off anything that went beyond the edge of the screen on mobile devices; removing overflow:hidden meant that any horizontal scrolling moved the whole page (leaving ugly whitespace on the righthand side of the page). In order to add x-scrolling to the catalogue table only, I found and used an answer from [Serge Stroobandt](https://stackoverflow.com/a/30423904) on Stack Overflow which meant users are able to scroll horizontally in the table only without compromising the layout of the table itself, or adding any whitespace to other elements on the page.
