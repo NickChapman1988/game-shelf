@@ -56,37 +56,43 @@ Pylint was used to validate Python code. Any errors were corrected and re-run un
 
 </details>
 
+Google Chrome's <b>lighthouse</b> was also run and provided the following reports:
 <details>
-<summary>Google Chrome's <b>lighthouse</b> was also run and provided the following reports:</summary>
+<summary><b>Lighthouse</b></summary>
 
 Home page
 
-- [Mobile]()
-- [Desktop]()
+- [Mobile](static/images/lighthouse/lighthouse-home-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-home.png)
 
 login page
 
-- [Mobile]()
-- [Desktop]()
+- [Mobile](static/images/lighthouse/lighthouse-login-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-login.png)
+
+register page
+- [Mobile](static/images/lighthouse/lighthouse-register-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-register.png)
 
 games page
 
-- [Mobile]()
-- [Desktop]()
+- [Mobile](static/images/lighthouse/lighthouse-games-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-games.png)
 
 individual game page
 
-- [Mobile]()
-- [Desktop]()
+- [Mobile](static/images/lighthouse/lighthouse-ind-game-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-ind-game.png)
 
 profile page
 
-- [Mobile]()
-- [Desktop]()
+- [Mobile](static/images/lighthouse/lighthouse-profile-mob.png)
+- [Desktop](static/images/lighthouse/lighthouse-profile.png)
 
 </details>
 
-* Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
+
+Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
 
 <details><summary><b>Mobile Friendly Test</b></summary>
 
