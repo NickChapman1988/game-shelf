@@ -42,7 +42,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
     -   #### Frequent User Goals
 
-        1. As a Frequent User, I want to check to see if there are any new reviews or new games added.
+        1. As a Frequent User, I want to check to see if there are any new reviews.
         2. As a Frequent User, I want to organise reviews I've written on my profile.
 
     -   #### Site Owner Goals
@@ -59,11 +59,11 @@ The website is split into four main sections - a home (landing) page, a games ca
 
 ## Skeleton
 
-* Home Page: <a href="#" target="_blank">Home</a>
-* Games Page: <a href="#" target="_blank">Games</a>
-* Individual Games Page: <a href="#" target="_blank">Game Pages</a>
-* About Page: <a href="#" target="_blank">About</a>
-* Profile Page: <a href="#" target="_blank">Profile</a>
+* Home Page: <a href="/workspace/game-shelf/static/docs/wireframes/home.pdf" target="_blank">Home</a>
+* Games Page: <a href="/workspace/game-shelf/static/docs/wireframes/games.pdf" target="_blank">Games</a>
+* Individual Games Page: <a href="/workspace/game-shelf/static/docs/wireframes/individual-game.pdf" target="_blank">Game Pages</a>
+* About Page: <a href="/workspace/game-shelf/static/docs/wireframes/about.pdf" target="_blank">About</a>
+* Profile Page: <a href="/workspace/game-shelf/static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
 
 ## Surface
 
@@ -166,11 +166,9 @@ The website is split into four main sections - a home (landing) page, a games ca
 ---
 
 ## Testing
-* Forms testing: to ensure the website was functioning as it should, I tested each of the forms on different devices and browsers. This was done by clicking the 'Submit' 
-button on the Contact Form without any text in inputs to make sure it resulted with the desired response of 'Please fill out this field'.
-* Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, I made sure 
-each link has either a colour change or colour-changing icon when hovered (with exception of the logo when visible) and included a target="_blank" attribute so that a new 
-browser tab is opened when clicked.
+* Forms testing: to ensure the website was functioning as it should, I tested each of the forms on different devices and browsers. This was done by clicking the 'Submit' button on the Add & Edit Review forms, and on the Add & Edit Games forms without any text in inputs to make sure they resulted in the desired response of 'Please fill out this field'. Each 'required' input was tested individually on all forms to ensure the validation responded appropriately each time.
+
+* Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, all external links included a target="_blank" attribute so that a new browser tab is opened when clicked.
 
 * Testing across various devices: I used BrowserStack for this, in addition to feedback from my friends and peers. The devices on which the website was tested are as follows:
 
@@ -180,16 +178,17 @@ browser tab is opened when clicked.
 
 
 #### Validation
-HTML - [W3C](https://validator.w3.org/) - Markup Validation
-![Image]()
 
+HTML and CSS code were validated with the W3C Markup and CSS validators. 
+HTML - [W3C](https://validator.w3.org/) - Markup Validation
+
+![Image]()
 
 CSS - [W3C](https://jigsaw.w3.org/css-validator/) - CSS Validation
 
 ![Image](static/images/css-validation.png)
 
-
-Javascript - [JSHint](https://jshint.com/) - Javascript Validation
+Javascript code was run through [JSHint](https://jshint.com/) to ensure it was syntactically correct.
 
 ![Image](static/images/js-validation.png)
 
