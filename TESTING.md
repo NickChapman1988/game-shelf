@@ -86,33 +86,34 @@ profile page
 
 </details>
 
+* Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
 
+<details><summary><b>Mobile Friendly Test</b></summary>
+
+* Home - ![Image](static/images/mob-friendly-home.png)
+* Games - ![Image](static/images/mob-friendly-games.png)
+* Individual Game Page - ![Image](static/images/mob-friendly-ind-game.png)
+* About - ![Image]()
+* Login - ![Image](static/images/mob-friendly-login.png)
+* Register - ![Image](static/images/mob-friendly-register.png)
+</details>
 
 
 ## Manual Testing
-
-### Testing Environments
 
 * Forms testing: to ensure the website was functioning as it should, I tested each of the forms on different devices and browsers. This was done by clicking the 'Submit' button on the Add & Edit Review forms, and on the Add & Edit Games forms without any text in inputs to make sure they resulted in the desired response of 'Please fill out this field'. Each 'required' input was tested individually on all forms to ensure the validation responded appropriately each time.
 
 * Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, all external links included a target="_blank" attribute so that a new browser tab is opened when clicked.
 
+### Testing Environments
+
+
+
 * Testing across various devices: I used BrowserStack for this, in addition to feedback from my friends and peers. The devices on which the website was tested are as follows:
 
 * Tested on Chrome, Firefox, Safari and Microsoft Edge
 
-* Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
 
-<details><summary><b>Mobile Friendly Test</b></summary>
-
-* Home
-* Games
-* Individual Game Page
-* About
-* Profile
-* Login
-* Register -
-</details>
 
 
 
