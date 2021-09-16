@@ -2,16 +2,16 @@
 {% block content %}
 
     <hr>
-    <h3 class="center-align deep-purple-text page-header">Individual Game Page</h3>
+    <h3 class="center-align deep-purple-text page-header">{{ game.game_title }}</h3>
     <hr>
 
     <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m7" id="ratings-image">
             <div >
-                <img id="game-image" class="col s8" src="{{ game.image_url }}" alt="{{ game.game_title.lower() }}-thumbnail">
+                <img id="game-image" class="col s6" src="{{ game.image_url }}" alt="{{ game.game_title.lower() }}-thumbnail">
             </div>
             {% if game.average_rating != 0 %}
-            <div id="rating-box" class="col s2 center-align">
+            <div id="rating-box" class="col s3 center-align">
                 <p>
                     {{ game.average_rating }}
                 </p>
@@ -20,7 +20,7 @@
                 </label>
             </div>
             {% else %}
-            <div id="rating-box" class="col s2 center-align">
+            <div id="rating-box" class="col s3 center-align">
                 <p>
                     --
                 </p>
@@ -32,7 +32,7 @@
             {% if 'user' in session %}
                 {% if existing_review == 1 %}
                     <!-- Display to registered users without review -->
-                    <div id="user-rating-box" class="col s2 center-align">   
+                    <div id="user-rating-box" class="col s3 center-align">   
                         <p>
                             --
                         </p>
@@ -42,7 +42,7 @@
                     </div>
                 {% else %}
                     <!-- Display to registered users with review -->
-                    <div id="user-rating-box" class="col s2 center-align">   
+                    <div id="user-rating-box" class="col s3 center-align">   
                         <p>
                             {{ existing_review.game_rating }}
                         </p>
@@ -55,7 +55,7 @@
                     <!-- Not displayed for unregistered users -->
             {% endif %}
         </div>
-        <div class="col s12 m6">
+        <div class="col s12 m5">
             <div id="game-details" class="col s12 center-align">
                 <h4>
                     {{ game.game_title }} ({{ game.release_year }})
@@ -90,21 +90,21 @@
                 {% if existing_review == 1 %}
                     <!-- Display to registered users without review -->
                     <div class="col s6">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
                     </div>                
                     <div class="col s6">
-                        <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
+                        <a href="{{ url_for('add_review') }}" class="btn-large purple">Review</a>
                     </div>
                 {% else %}
                     <!-- Display to registered users with review -->
                     <div class="col s6 push-s3">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
                     </div>
                 {% endif %}
             {% else %}
                 <!-- Display to unregistered users -->                
                 <div class="col s6 push-s3">
-                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3">Buy</a>
+                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
                 </div>
             {% endif %}
         </div>

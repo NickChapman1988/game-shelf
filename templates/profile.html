@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Add Review</a>
+    <a href="{{ url_for('add_review') }}" class="btn-large purple">Add Review</a>
     {% if session.user|lower == "admin"|lower %}
         <a href="{{ url_for('add_game') }}" class="btn-large black-text blue lighten-3">Add Game</a>
     {% endif %}
@@ -25,7 +25,7 @@
                     <strong>{{ review.game_title }}</strong>
                 </div>
                 <div class="col s4">                
-                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small purple lighten-2">Edit</a>
+                    <a href="{{ url_for('edit_review', review_id=review._id) }}" class="btn-small purple">Edit</a>
                     <button data-target="{{ review._id }}" class="btn-small pink darken-1 modal-trigger">Delete</button>
                     <!-- Modal Structure -->
                     <div id="{{ review._id }}" class="modal">

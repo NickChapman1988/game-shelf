@@ -99,7 +99,7 @@ main {
 #image-gallery {
     margin-bottom: 10px;
     padding: 0;
-    background-image: url("/static/images/games-hero-bg.png");
+    background-image: url("/static/images/games-hero-bg.jpg");
     width: 100%;
     height: 238px;
 }
@@ -235,10 +235,13 @@ main {
 }
 
 /*---------------------------- Individual Game Pages ------------*/
+#ratings-image {
+    padding: 0;
+}
 
 #rating-box, #user-rating-box {
-    height: 80px;
-    width: 80px;
+    height: 65px;
+    width: 65px;
     background-color: #558b2f;
     border-radius: 50%;
     margin: 2px;
@@ -249,8 +252,8 @@ main {
 }
 
 #rating-box p, #user-rating-box p {
-    line-height: 27px;
-    font-size: 26px;
+    line-height: 20px;
+    font-size: 25px;
     color: white;
     font-weight: 700;
 }
@@ -262,6 +265,9 @@ main {
     object-fit: cover;
 }
 
+#game-details {
+    padding-top: 20px;
+}
 /*------------------------- Profile -------------*/
 .review-box {
     margin-bottom: 5px;
