@@ -177,24 +177,44 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Ensured the website was also responsive on all pages through [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly).
 
 
-#### Validation
+### Validation
 
-HTML and CSS code were validated with the W3C Markup and CSS validators. 
-HTML - [W3C](https://validator.w3.org/) - Markup Validation
+**HTML** and **CSS** code were validated with the W3C Markup and CSS validators. 
 
-![Image]()
+<details>
+<summary><b>HTML</b></summary>
 
-CSS - [W3C](https://jigsaw.w3.org/css-validator/) - CSS Validation
+</details>
+<details><summary><b>CSS</b></summary>
+
+[W3C](https://jigsaw.w3.org/css-validator/) - CSS Validation
 
 ![Image](static/images/css-validation.png)
 
+</details>
+
 Javascript code was run through [JSHint](https://jshint.com/) to ensure it was syntactically correct.
 
+<details>
+<summary><b>Javascript</b></summary>
+
 ![Image](static/images/js-validation.png)
+</details>
 
-Python - 
 
-#### Project Bugs and Solutions
+Pylint was used to validate Python code. Any errors were corrected and re-run until correct. 
+
+<details><summary><b>Python</b></summary>
+
+![Image](static/images/pylint-validation.png)
+
+* The unbalanced tuple is part of the pagination code, and does not produce an actual error.
+* A warning regarding unused-imports remains as the linter is unable to recognise the use of variables in env.py.
+
+</details>
+
+
+### Project Bugs and Solutions
 * CSS for page overflow and x-scrolling meant the games catalogue table was cutting off anything that went beyond the edge of the screen on mobile devices; removing overflow:hidden meant that any horizontal scrolling moved the whole page (leaving ugly whitespace on the righthand side of the page). In order to add x-scrolling to the catalogue table only, I found and used an answer from [Serge Stroobandt](https://stackoverflow.com/a/30423904) on Stack Overflow which meant users are able to scroll horizontally in the table only without compromising the layout of the table itself, or adding any whitespace to other elements on the page.
 * Adding 'if' condition to check for existing user reviews on the individual game pages inadvertently prevented non-registered users from viewing the games at all, as the 'user' key couldn't be found (because 'user' was only created on login). 
 
