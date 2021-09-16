@@ -59,11 +59,11 @@ The website is split into four main sections - a home (landing) page, a games ca
 
 ## Skeleton
 
-* Home Page: <a href="/workspace/game-shelf/static/docs/wireframes/home.pdf" target="_blank">Home</a>
-* Games Page: <a href="/workspace/game-shelf/static/docs/wireframes/games.pdf" target="_blank">Games</a>
-* Individual Games Page: <a href="/workspace/game-shelf/static/docs/wireframes/individual-game.pdf" target="_blank">Game Pages</a>
-* About Page: <a href="/workspace/game-shelf/static/docs/wireframes/about.pdf" target="_blank">About</a>
-* Profile Page: <a href="/workspace/game-shelf/static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
+* Home Page: <a href="static/docs/wireframes/home.pdf" target="_blank">Home</a>
+* Games Page: <a href="static/docs/wireframes/games.pdf" target="_blank">Games</a>
+* Individual Games Page: <a href="static/docs/wireframes/individual-game.pdf" target="_blank">Game Pages</a>
+* About Page: <a href="static/docs/wireframes/about.pdf" target="_blank">About</a>
+* Profile Page: <a href="static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
 
 ## Surface
 
