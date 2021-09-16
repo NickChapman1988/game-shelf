@@ -48,10 +48,6 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
         1. As a Site Owner, I want to earn money on games purchased through affiliate links  
 
- 
-## Scope
-* 
-
 ## Structure
 
 The website is split into four main sections - a home (landing) page, a games catalogue page, an about page and user profile page. The fixed navbar allows the user to easily navigate the site, and presents a consistent layout, while the toggle feature makes the navbar more accessible for mobile and tablet devices whilst maintaining consistent positioning. The Home page displays a prominent header image and site message, with further information accessible on the About page. The Games page is clean and simple, ranking the games based on average user rating. Each game on the Games page links to individual games pages with additional information on each game. The About page provides users an easy way to give feedback and contact the site owner. The Profile page contains the primary CRUD functionality, with users able to add, read, edit and delete their own reviews for games. 
@@ -63,6 +59,8 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Individual Games Page: <a href="static/docs/wireframes/individual-game.pdf" target="_blank">Game Pages</a>
 * About Page: <a href="static/docs/wireframes/about.pdf" target="_blank">About</a>
 * Profile Page: <a href="static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
+
+* Basic Functionality Map: ![Image](static/images/crud-map.png)
 
 ## Surface
 
@@ -140,16 +138,18 @@ The website is split into four main sections - a home (landing) page, a games ca
 * [CSS](https://en.wikipedia.org/wiki/CSS)
 * [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 * [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+* [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 * [MongoDB](https://en.wikipedia.org/wiki/MongoDB)
 
 #### Libraries & Frameworks:
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
 * [Balsamiq](https://balsamiq.com/) - Used for the creation of wireframes.
 * [FontAwesome](https://fontawesome.com/) - Used for all form icons, as well as search bar and menu toggle icons.
 * [Lucid](https://lucid.co/) - Used to map out user interaction and CRUD functionality. 
 * [JQuery](https://jquery.com) - The project uses JQuery to simplify DOM manipulation.
 * [GoogleFonts](https://fonts.google.com/) - 'Syncopate' and 'Raleway' fonts.
 * [Materialize](https://materializecss.com/) - Modern responsive front-end framework based on Material Design, used to construct the majority of visual elements of the site.
+* [Werkzeug](https://palletsprojects.com/p/werkzeug/) - The project uses the Werkzeug WSGI library to manage the User Authentification.
 
 #### Version Control:
 * [Github](https://github.com/) - Used to store the code 
@@ -161,6 +161,9 @@ The website is split into four main sections - a home (landing) page, a games ca
 * [Stack Overflow](https://stackoverflow.com/) - Used for general troubleshooting and examples.
 * [W3Schools](https://www.w3schools.com/) - Used for examples and tutorials.
 * [ChromeDevTools](https://developers.google.com/web/tools/chrome-devtools) - Used frequently to detect any issues/bugs or layout differences.
+* [Coolors](https://coolors.co/) - Used to help define the site colour scheme.
+* [ami.responsive](http://ami.responsivedesign.is/) - Used to generate multi-device mockup image.
+* [ResizeImage](https://resizeimage.net/) - Used to resize images to web-optimised sizes
 
 ---
 
@@ -230,6 +233,36 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+### Database Deployment
+
+The site uses a MongoDB database for data storage and retrieval.
+
+#### Connecting to Mongodb
+
+From the CLI:
+
+`mongo "mongodb<url connection string>" --username root`
+
+Input the root password when prompted
+
+#### Creating or selecting a database
+
+From the MongoDB CLI:
+
+`use <database>`
+
+#### Creating a collection
+
+From the MongoDB CLI:
+
+`db.<collection>.insert(<document>)`
+
+#### Adding an index
+
+From the MongoDB CLI:
+
+`db.<collection>.createIndex({<fields>:<type>}{<options>})`
 
 ## Credits
 * Header images are by [Ross Connell](https://www.moregamesplease.com/), used with permission. 
