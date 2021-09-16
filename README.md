@@ -225,6 +225,12 @@ In order to fix this, I introduced an additional first 'if' condition to check w
 
 ![Image](static/images/logged-out-games-fix.png) 
 
+* During testing, I found it was possible for users to submit reviews without selecting a rating, which led to a TypeError on the screen while still creating a review in the database with a game rating equal to 'None'. To prevent this, I added the 'required' attribute to the rating select input on both the 'Edit Review' and 'Add Review' forms which had not been present previously.
+
+![Image](static/images/no-rating-page.png)
+![Image](static/images/no-rating-error.png)
+
+
 ### Testing User Stories
 
 ## Deployment
