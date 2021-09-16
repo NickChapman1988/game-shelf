@@ -225,7 +225,7 @@ In order to fix this, I introduced an additional first 'if' condition to check w
 
 ![Image](static/images/logged-out-games-fix.png) 
 
-#### Testing User Stories
+### Testing User Stories
 
 ## Deployment
 
@@ -301,6 +301,9 @@ Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-re
   
 
 ## Acknowledgements
+* My Mentor, Nishant Kumar, for his guidance throughout this project.
 * Thanks to Gwen Bradbury and Ed Bradley on Slack for tackling the 'defensive programming' modal
 * Huge thanks to Sean Murphy, Miklos Sarosi, and especially Jo Heyndels from Tutor Support for their patience, support and tutoring!
+* My family and friends for their feedback and help with testing.
+* As ever, eternal thanks and love to my wife and son for their endless patience, support and lending of devices for testing!
 
