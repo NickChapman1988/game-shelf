@@ -28,7 +28,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-crown prefix deep-purple-text"></i>
-                    <input id="review_title" name="review_title" value="{{ review.review_title }}" class="validate" required></textarea>
+                    <input id="review_title" name="review_title" value="{{ review.review_title }}" class="validate" required>
                     <label for="review_title" class="active">Review Title</label>
                 </div>
             </div>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-pen prefix deep-purple-text"></i>
-                    <textarea id="review_text" name="review_text" class="materialize-textarea" class="validate" required>
+                    <textarea id="review_text" name="review_text" class="materialize-textarea validate" required>
                         {{- review.review_text -}} 
                     </textarea>
                     <label for="review_text">Review</label>
