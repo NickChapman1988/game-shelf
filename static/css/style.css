@@ -46,8 +46,9 @@ main {
     line-height: 2;
 }
 
-.btn-small {
+.btn-small, .btn-large {
     margin: 5px;
+    white-space: nowrap;
 }
 
 .btn-large {
@@ -56,6 +57,10 @@ main {
 
 .card-panel {
     padding: 10px;
+}
+
+.input-field>label {
+    color: #767676;
 }
 
 /* Icon Grow adapted from Hover.CSS by Ian Lunn https://ianlunn.github.io/Hover/*/
@@ -272,5 +277,5 @@ main {
 /*------------------------ Register -------------*/
 .password-hint {
     font-size: 12px;
-    color: grey;
+    color: #767676;
 }

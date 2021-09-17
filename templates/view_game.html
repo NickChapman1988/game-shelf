@@ -88,20 +88,20 @@
             {% if 'user' in session %}
                 {% if existing_review == 1 %}
                     <!-- Display to registered users without review -->
-                    <div class="col s4">
+                    <div class="col s6 m4">
                         <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
                     </div>                
-                    <div class="col s4">
+                    <div class="col s6 m4">
                         <a href="{{ url_for('add_review') }}" class="btn-large purple">Review</a>
                     </div>
                     {% if session.user|lower == "admin"|lower %}
-                        <div class="col s4">
+                        <div class="col s6 push-s3 m4">
                             <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-large black-text blue lighten-3">Edit Game</a>
                         </div>
                     {% endif %}
                 {% else %}
                     <!-- Display to registered users with review -->
-                    <div class="col s6 push-s3">
+                    <div class="col s6">
                         <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
                     </div>
                     {% if session.user|lower == "admin"|lower %}
@@ -141,7 +141,7 @@
                 <div class="center-align">
                     <p>It doesn't look like anyone's written a review for this game yet!</p>
                     <p>Want to be the first?</p>
-                    <a href="{{ url_for('add_review') }}" class="btn-large purple lighten-2">Review</a>
+                    <a href="{{ url_for('add_review') }}" class="btn-large purple">Review</a>
                 </div>
             {% else %}
                 <ul class="collapsible">
@@ -155,7 +155,7 @@
                         </div>
                         <div class="collapsible-body">
                             <p><em>Written by {{ review.username|capitalize() }} on {{ review.date_created.strftime("%B %d, %Y") }}</em></p>
-                            <p><strong>Rating: {{ review.game_rating }}</strong></p>
+                            <p class="deep-purple-text"><strong>Rating:</strong> {{ review.game_rating }}</p>
                             <span>{{ review.review_text }}</span>
                         </div>
                     </li>
