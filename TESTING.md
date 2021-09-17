@@ -9,7 +9,6 @@
 
 - [Manual Testing](#Manual-Testing)
   - [Testing Environments](#Testing-Environments)
-  - [Unit Testing](#Unit-Testing)
   - [Peer Code Review](#Peer-Code-Review)
   - [Student Checklist](#Student-Checklist)
   - [Testing User Stories](#Testing-User-Stories)
@@ -20,10 +19,46 @@
 
 ### Validation
 
-**HTML** and **CSS** code were validated with the W3C Markup and CSS validators. 
+**HTML** and **CSS** code were validated with the W3C Markup and CSS validators. Both were found to have no errors or warnings. Reports can be seen below:
 
 <details>
 <summary><b>HTML</b></summary>
+
+[W3C](https://validator.w3.org/) - HTML Validation
+
+* Home
+
+![Image](static/images/html-validation/home-html.jpg)
+
+* Games
+
+![Image](static/images/html-validation/games-html.jpg)
+
+* Individual Game Pages
+
+![Image](static/images/html-validation/ind-game-html.jpg)
+
+* About
+
+![Image](static/images/html-validation/about-html.jpg)
+
+* Login
+
+![Image](static/images/html-validation/login-html.jpg)
+
+* Register
+
+![Image](static/images/html-validation/register-html.jpg)
+
+* Add Review
+
+![Image](static/images/html-validation/add-review-html.jpg)
+
+* Edit Review
+
+![Image](static/images/html-validation/edit-review-html.jpg)
+
+
 
 </details>
 <details><summary><b>CSS</b></summary>
@@ -132,6 +167,8 @@ Ensured the website was also responsive on all pages through [Google Mobile Frie
 
 * Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, all external links included a target="_blank" attribute so that a new browser tab is opened when clicked.
 
+* Manual testing was conducted to test functions and database entry submissions. In this way most bugs were caught and fixed before they were committed to the repository or live site. The python print() and JavaScript console.log functions were used to output variable values and breakpoints during development to give hints to where faults were occurring and why.
+
 ### Testing Environments
 Primary testing was undertaken on a Windows 10 desktop machine with the Google Chrome browser. 
 
@@ -169,11 +206,6 @@ Primary testing was undertaken on a Windows 10 desktop machine with the Google C
   - Chrome
   - FireFox
   - Safari
-
-### Testing
-Manual testing was conducted to test functions and database entry submissions. In this way most bugs were caught and fixed before they were committed to the repository or live site.
-
-The python print() and JavaScript console.log functions were used to output variable values and breakpoints during development to give hints to where faults were occurring and why.
 
 ### Peer Code Review
 
