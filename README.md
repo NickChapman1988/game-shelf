@@ -46,7 +46,8 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
     -   #### Site Owner Goals
 
-        1. As a Site Owner, I want to earn money on games purchased through affiliate links  
+        1. As a Site Owner, I want to earn money on games purchased through affiliate links 
+        2. As a Site Owner, I want to be able to manage and maintain the games database
 
 ## Structure
 

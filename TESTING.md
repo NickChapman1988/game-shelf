@@ -177,27 +177,52 @@ The python print() and JavaScript console.log functions were used to output vari
 
 ### Peer Code Review
 
+The project was submitted for peer code review on the Code Institute Slack [channel](https://code-institute-room.slack.com/archives/CGWQJQKC5/p1631878731174400)
+
 ### Student Checklist
 
 ### Testing User Stories
 - #### First Time Visitor Goals
 
   1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about board games.
+  > * Home page welcome message make site purpose immediately clear
+  > * Prominent header image reinforces site message
+
   2. As a First Time Visitor, I want to be able to easily navigate the site to find content.
+  > * Prominent, clearly labelled navbar on desktop site and navbar toggle on tablet/mobile
+  > * Hover effect on navbar links to aid navigation
                        
 -   #### Returning Visitor Goals
 
   1. As a Returning Visitor, I want to find information about games I may want to play
-  2. As a Returning Visitor, I want to share my reviews of games I have played     
+  > * Latest reviews highlighted on homepage loading
+  > * Basic game information displayed on Games page
+  > * Full information provided on individual game pages
+
+  2. As a Returning Visitor, I want to share my reviews of games I have played   
+  > * 'Review' button for each unreviewed game on Games page
+  > * 'Review' button present on individual game page
+  > * 'Add Review' button present whenever user accesses Profile page  
 
 -   #### Frequent User Goals
 
   1. As a Frequent User, I want to check to see if there are any new reviews.
+  > * Latest Reviews presented on homepage and Games page
+
   2. As a Frequent User, I want to organise reviews I've written on my profile.
+  > * Users can view all their reviews on Profile page collapsible
+  > * Users can add, read, edit or delete any of their reviews from Profile page
 
 -   #### Site Owner Goals
 
   1. As a Site Owner, I want to earn money on games purchased through affiliate links
+  > * 'Buy' button present for all games on Games page
+  > * 'Buy' button also present on individual game pages
+  > * 'Buy' buttons link to external affiliate link
+
+  2. As a Site Owner, I want to be able to manage and maintain the games database
+  > * Admin users have 'Add Game' button on Profile to add new games to database
+  > * 'Edit Game' button for every game present on Games page and individual game pages
   
 
 ### Project Bugs and Solutions
