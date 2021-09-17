@@ -215,9 +215,9 @@ main {
 
 /* Image on catalogue page */
 .game-thumbnail {
-        max-width: 64px;
-        max-height: 64px; 
-        object-fit: cover;
+    max-width: 64px;
+    max-height: 64px; 
+    object-fit: cover;
 }
 
 #reviews-column {
