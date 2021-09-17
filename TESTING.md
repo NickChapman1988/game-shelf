@@ -89,6 +89,11 @@ profile page
 - [Mobile](static/images/lighthouse/lighthouse-profile-mob.png)
 - [Desktop](static/images/lighthouse/lighthouse-profile.png)
 
+about page
+
+- [Mobile](static/images/lighthouse/lighthouse-about-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-about.jpg)
+
 </details>
 
 
@@ -110,7 +115,7 @@ Ensured the website was also responsive on all pages through [Google Mobile Frie
 
 * About - 
 
-![Image]()
+![Image](static/images/mobile-friendly-tests/mob-friendly-about.png)
 
 * Login - 
 
