@@ -96,23 +96,29 @@ Ensured the website was also responsive on all pages through [Google Mobile Frie
 
 <details><summary><b>Mobile Friendly Test</b></summary>
 
-* Home - 
-![Image](static/images/mob-friendly-home.png)
+* Home -
+
+![Image](static/images/mobile-friendly-tests/mob-friendly-home.png)
 
 * Games - 
-![Image](static/images/mob-friendly-games.png)
+
+![Image](static/images/mobile-friendly-tests/mob-friendly-games.png)
 
 * Individual Game Page - 
-![Image](static/images/mob-friendly-ind-game.png)
+
+![Image](static/images/mobile-friendly-tests/mob-friendly-ind-game.png)
 
 * About - 
+
 ![Image]()
 
 * Login - 
-![Image](static/images/mob-friendly-login.png)
+
+![Image](static/images/mobile-friendly-tests/mob-friendly-login.png)
 
 * Register - 
-![Image](static/images/mob-friendly-register.png)
+
+![Image](static/images/mobile-friendly-tests/mob-friendly-register.png)
 
 </details>
 

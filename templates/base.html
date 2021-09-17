@@ -42,7 +42,7 @@
                     </li> 
                     <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_catalogue') }}">Games</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
                     {% if session.user %}
                         <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -60,7 +60,7 @@
             <li><h4 class="center-align deep-purple-text page-header">Game Shelf</h4></li>
             <li><a href="{{ url_for('home') }}">Home</a></li>
             <li><a href="{{ url_for('get_catalogue') }}">Games</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
             {% if session.user %}
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
@@ -80,11 +80,11 @@
             </li>
         </ul>
     </header>
-    <section id="image-row" class="row">   
+    <div id="image-row" class="row">   
         <div id="image-gallery" class="col s12 image-gallery">
             <!-- Header Image -->
         </div>   
-    </section>
+    </div>
     <section>
         <!-- flash messages-->
         {% with messages = get_flashed_messages() %}

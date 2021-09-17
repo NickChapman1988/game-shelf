@@ -41,6 +41,12 @@ def home():
     return render_template("home.html", latest_reviews=latest_reviews)
 
 
+@app.route("/about")
+def about():
+    """Renders about page"""
+    return render_template("about.html")
+
+
 @app.route("/get_catalogue")
 def get_catalogue(offset=0, per_page=10):
     """Grabs all games from catalogue, sorted by average user rating"""

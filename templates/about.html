@@ -1,58 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
-
     <hr>
+        <h3 class="center-align deep-purple-text page-header">
+            About
+        </h3>
+    <hr>    
     <div class="row">
-        <div class="col s12 l9">
-            <h4 class="deep-purple-text page-header center-align">Welcome</h4>
-            <p class="welcome-text">Welcome to Game Shelf!</p>
+        <div class="col m3 hide-on-small-only" id="left-image-column">
+            <img src="static/images/ttrny.jpg" class="about-image responsive-img" alt="#">
+            <img src="static/images/lord1edit.jpg" class="about-image responsive-img" alt="#">
+            <img src="static/images/bloodrage.jpg" class="about-image responsive-img" alt="#"> 
+        </div>
+        <div class="col s12 m6">
             <p class="welcome-text">
-                Game Shelf is a board game review site - a place for players new and old to find games they are
-                interested in playing, read what others have said about those games,
-                and rate your favourites!
+                Game Shelf aims to make board games simple. There are literally thousands of games out there, so it's
+                sometimes hard to know where to start when it comes to finding your next (or maybe first!) game.
+                To help with that, Game Shelf tries to cut out the clutter and instead provide key information and,
+                perhaps more importantly, honest reviews from other players to help you decide what you want to play.
             </p>
             <p class="welcome-text">
-                Our Games page shows every single game ranked according to user ratings, so you can quickly find "the
-                best" games!
+                You can browse and search our <a href="{{ url_for('get_catalogue') }}">Games</a> and read the reviews
+                other players have written, as well as how each game is rated by the community. If you want to add your
+                own ratings and reviews for games you've played, you can register an account and start straight away!
+                It's free, and allows you to add ratings and reviews for any of the games in our catalogue.
             </p>
             <p class="welcome-text">
-                If you've played something lately, why not leave a review for it? Registered users can add reviews for
-                games and rate their favourites too!
+                Once you've reviewed a game, your rating will show up on the <a href="{{ url_for('get_catalogue') }}">Games</a> 
+                page so you can see how your rating compares to the community average rating. Your review will also be added 
+                to the relevant game page for others to read too. You can add more reviews, and edit or delete existing 
+                reviews, from your Profile page.
             </p>
             <p class="welcome-text">
-                And if you're in the market for a new game and find one you like the look of, all games have a 'Buy'
-                link to where you can purchase from a friendly local games store!
+                We hope you find Game Shelf useful. Now go play games!
             </p>
         </div>
-        <div class="col l3" id="reviews-column">
-            <h4 class="center-align deep-purple-text page-header">
-                Latest Reviews
-            </h4>
-            {% for review in latest_reviews %}
-                <!-- Review Title -->
-                <div class="row latest-reviews">
-                    <div class="col l12">
-                        <div class="card-panel review-card">
-                            <h5 class="deep-purple-text">
-                                {{ review.review_title}}
-                            </h5>
-                            <h6>
-                                {{ review.game_title }}
-                            </h6>
-                            <strong>Rating: {{ review.game_rating }}</strong>
-                            <p class="review-text-para">
-                                {{ review.review_text }}
-                            </p>
-                            <p>
-                                <em>Written by {{ review.username|capitalize }}</em>
-                            </p>
-                            <p>
-                                <em>{{ review.date_created.strftime("%B %d, %Y") }}</em>
-                            </p>
-                        </div>
-                    </div>                    
-                </div>
-            {% endfor %}
+        <div class="col m3 hide-on-small-only" id="right-image-column">
+            <img src="static/images/scythe-edit.jpg" class="about-image responsive-img" alt="#">
+            <img src="static/images/downforce.jpg" class="about-image responsive-img" alt="#">
+            <img src="static/images/aboveandbelow.jpg" class="about-image responsive-img" alt="#">            
         </div>
     </div>
 
