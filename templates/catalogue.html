@@ -36,7 +36,7 @@
                             </td>
                             <td>
                                 <a href="{{ url_for('view_game', game_id=game._id) }}" class="deep-purple-text"><strong>{{ game.game_title }}</strong></a>
-                                <p class="game-description">{{ game.game_description }}</p>
+                                <p class="game-description hide-on-small-only">{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}
                                 <td class="center-align">{{ game.game_rating }}</td>
@@ -68,7 +68,7 @@
             </div>
         </div>
         
-        <div class="col l3" id="reviews-column">
+        <div class="col l3 show-on-large" id="reviews-column">
             <h4 class="center-align deep-purple-text page-header">
                 Latest Reviews
             </h4>

@@ -206,21 +206,8 @@ main {
         object-fit: cover;
 }
 
-/* Description on catalogue page */
-@media only screen and (max-width: 768px){
-    .game-description {
-        display: none;
-    }
-}
-
 #reviews-column {
     border-left: 2px solid #673AB7;
-}
-
-@media only screen and (max-width: 992px){
-    #reviews-column {
-        display: none;
-    }
 }
 
 .review-card p {
