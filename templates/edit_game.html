@@ -140,7 +140,7 @@
             <div class="row">
                 <div class="col s12 center-align">
                     <!-- Cancel Button -->
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large red accent-3 text-shadow">
+                    <a href="{{ url_for('view_game', game_id=game._id) }}" class="btn-large red accent-3 text-shadow">
                         Cancel <i class="fas fa-times-circle right"></i>
                     </a>
                     <!-- Submit Button -->
