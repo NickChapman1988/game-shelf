@@ -138,6 +138,7 @@ The site allows users to add new reviews and edit their existing ones. Users can
 * A custom 404 error page with suggestions to help users find content if url is mis-linked/typed.
 * Allow reordering of games catalogue by title (alphabetical) or user rating, as well as default average rating.
 * Allow user to edit profile to change username or password
+* Ability to apply 'admin' role to more than just 'Admin' user
 
 ## Technologies Used
 

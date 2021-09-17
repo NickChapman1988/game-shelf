@@ -69,12 +69,12 @@
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}    
             <li>
-                <form action="{{ url_for('search') }}" method="POST">
+                <form action="{{ url_for('search_mobile') }}" method="POST">
                     <div class="input-field clearable-input" id="search-box">
                         <i class="fas fa-search prefix" id="search-icon-mob"></i>
-                        <input type="text" name="query" id="query" class="validate" minlength="3" aria-label="Search">
+                        <input type="text" name="query_mobile" id="query_mobile" class="validate" minlength="3" aria-label="Search">
                         <i class="fas fa-times" id="clear-icon-mob" data-clear-input onclick="clearSearch()"></i>
-                        <label class="label-icon" for="query"></label>      
+                        <label class="label-icon" for="query_mobile"></label>      
                     </div>
                 </form>
             </li>

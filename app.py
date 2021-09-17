@@ -93,6 +93,19 @@ def search():
         query=query)
 
 
+@app.route("/search_mobile", methods=["GET", "POST"])
+def search_mobile():
+    """Search box in navbar toggle for mobile"""
+    query = request.form.get("query_mobile")
+    catalogue = list(mongo.db.catalogue.find(
+        {"$text": {"$search": query}}).sort("average_rating", -1))
+    latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
+
+    return render_template(
+        "search.html", catalogue=catalogue, latest_reviews=latest_reviews,
+        query=query)
+
+
 @app.route("/view_game/<game_id>")
 def view_game(game_id):
     """Grabs full game entry from database"""

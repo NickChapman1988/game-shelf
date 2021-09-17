@@ -192,7 +192,7 @@ The project was submitted for peer code review on the Code Institute Slack [chan
   > * Prominent, clearly labelled navbar on desktop site and navbar toggle on tablet/mobile
   > * Hover effect on navbar links to aid navigation
                        
--   #### Returning Visitor Goals
+- #### Returning Visitor Goals
 
   1. As a Returning Visitor, I want to find information about games I may want to play
   > * Latest reviews highlighted on homepage loading
@@ -204,7 +204,7 @@ The project was submitted for peer code review on the Code Institute Slack [chan
   > * 'Review' button present on individual game page
   > * 'Add Review' button present whenever user accesses Profile page  
 
--   #### Frequent User Goals
+- #### Frequent User Goals
 
   1. As a Frequent User, I want to check to see if there are any new reviews.
   > * Latest Reviews presented on homepage and Games page
@@ -213,7 +213,7 @@ The project was submitted for peer code review on the Code Institute Slack [chan
   > * Users can view all their reviews on Profile page collapsible
   > * Users can add, read, edit or delete any of their reviews from Profile page
 
--   #### Site Owner Goals
+- #### Site Owner Goals
 
   1. As a Site Owner, I want to earn money on games purchased through affiliate links
   > * 'Buy' button present for all games on Games page
@@ -225,7 +225,7 @@ The project was submitted for peer code review on the Code Institute Slack [chan
   > * 'Edit Game' button for every game present on Games page and individual game pages
   
 
-### Project Bugs and Solutions
+## Project Bugs and Solutions
 * CSS for page overflow and x-scrolling meant the games catalogue table was cutting off anything that went beyond the edge of the screen on mobile devices; removing overflow:hidden meant that any horizontal scrolling moved the whole page (leaving ugly whitespace on the righthand side of the page). In order to add x-scrolling to the catalogue table only, I found and used an answer from [Serge Stroobandt](https://stackoverflow.com/a/30423904) on Stack Overflow which meant users are able to scroll horizontally in the table only without compromising the layout of the table itself, or adding any whitespace to other elements on the page.
 * Adding 'if' condition to check for existing user reviews on the individual game pages inadvertently prevented non-registered users from viewing the games at all, as the 'user' key couldn't be found (because 'user' was only created on login). 
 
@@ -241,4 +241,15 @@ In order to fix this, I introduced an additional first 'if' condition to check w
 ![Image](static/images/no-rating-page.png)
 ![Image](static/images/no-rating-error.png)
 
-### Known Issues
+* While generating Lighthouse reports during testing, Accessibility scores were affected by the navbar search box and toggler search box sharing the same ID. 
+![Image](static/images/aria-id.png)
+
+As this could potentially effect user experience on screen readers and prevent users accessing the search functionality, I renamed the toggler search element and rerouted the python function to generate the same template as the desktop search.
+
+![Image](static/images/aria-id-improved.png)
+
+## Known Issues
+
+### Lighthouse
+
+* A number of the lighthouse reports flag issues with slow performance, mostly stemming from downloading large image files. Using software to convert images to WebP or AVIF formats would mitigate these issues in future
