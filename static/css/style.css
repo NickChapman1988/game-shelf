@@ -274,6 +274,10 @@ main {
     margin-bottom: 5px;
 }
 
+.user-reviews {
+    margin-bottom: 25px;
+}
+
 /*------------------------ Register -------------*/
 .password-hint {
     font-size: 12px;
