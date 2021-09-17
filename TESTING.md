@@ -9,14 +9,12 @@
 
 - [Manual Testing](#Manual-Testing)
   - [Testing Environments](#Testing-Environments)
-  - [Testing Methodology](#Testing-Methodology)
   - [Unit Testing](#Unit-Testing)
   - [Peer Code Review](#Peer-Code-Review)
   - [Student Checklist](#Student-Checklist)
+  - [Testing User Stories](#Testing-User-Stories)
 - [Project Bugs and Solutions](#Project-Bugs-and-Solutions)
 - [Known Issues](#Known-Issues)
-- [Testing User Stories](#Testing-User-Stories)
-
 
 ## Automated Testing
 
@@ -135,18 +133,72 @@ Ensured the website was also responsive on all pages through [Google Mobile Frie
 * Links (Internal & External): Each of the links when clicked have been checked so that the user is directed to the desired location. For a better UX experience, all external links included a target="_blank" attribute so that a new browser tab is opened when clicked.
 
 ### Testing Environments
+Primary testing was undertaken on a Windows 10 desktop machine with the Google Chrome browser. 
 
+**Desktop testing**
 
+- Platforms:
+  - Custom Desktop (Windows 10)
+  - ASUS E410MA Laptop (Windows 10)
+- Browsers:
+  - Google Chrome
+  - Microsoft Edge
+  - Firefox
+  - Opera
+  - Safari
 
-* Testing across various devices: I used BrowserStack for this, in addition to feedback from my friends and peers. The devices on which the website was tested are as follows:
+**Tablet testing**
 
-* Tested on Chrome, Firefox, Safari and Microsoft Edge
+- Platforms:
+  - Samsung Tab A6 (Android 10)
+  - Samsung Tab A4 (Android 10)
+  - iPad Pro 12.9 2020 (IOS 14)
+- Browsers:
+  - Google Chrome
+  - Firefox
+  - Safari
 
+**Mobile testing**
 
+- Platforms:
+  - Samsung Galaxy S8 (Android 10)
+  - Samsung Galaxy A42 (Android 10)
+  - iPhone 12 Pro (IOS 14)
+  - iPhone 11 (IOS 14)
+- Browsers:
+  - Chrome
+  - FireFox
+  - Safari
 
+### Testing
+Manual testing was conducted to test functions and database entry submissions. In this way most bugs were caught and fixed before they were committed to the repository or live site.
 
+The python print() and JavaScript console.log functions were used to output variable values and breakpoints during development to give hints to where faults were occurring and why.
 
+### Peer Code Review
 
+### Student Checklist
+
+### Testing User Stories
+- #### First Time Visitor Goals
+
+  1. As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about board games.
+  2. As a First Time Visitor, I want to be able to easily navigate the site to find content.
+                       
+-   #### Returning Visitor Goals
+
+  1. As a Returning Visitor, I want to find information about games I may want to play
+  2. As a Returning Visitor, I want to share my reviews of games I have played     
+
+-   #### Frequent User Goals
+
+  1. As a Frequent User, I want to check to see if there are any new reviews.
+  2. As a Frequent User, I want to organise reviews I've written on my profile.
+
+-   #### Site Owner Goals
+
+  1. As a Site Owner, I want to earn money on games purchased through affiliate links
+  
 
 ### Project Bugs and Solutions
 * CSS for page overflow and x-scrolling meant the games catalogue table was cutting off anything that went beyond the edge of the screen on mobile devices; removing overflow:hidden meant that any horizontal scrolling moved the whole page (leaving ugly whitespace on the righthand side of the page). In order to add x-scrolling to the catalogue table only, I found and used an answer from [Serge Stroobandt](https://stackoverflow.com/a/30423904) on Stack Overflow which meant users are able to scroll horizontally in the table only without compromising the layout of the table itself, or adding any whitespace to other elements on the page.
@@ -164,5 +216,4 @@ In order to fix this, I introduced an additional first 'if' condition to check w
 ![Image](static/images/no-rating-page.png)
 ![Image](static/images/no-rating-error.png)
 
-
-### Testing User Stories
+### Known Issues
