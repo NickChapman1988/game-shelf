@@ -60,7 +60,8 @@ The website is split into four main sections - a home (landing) page, a games ca
 * About Page: <a href="static/docs/wireframes/about.pdf" target="_blank">About</a>
 * Profile Page: <a href="static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
 
-* Basic Functionality Map: ![Image](static/images/crud-map.png)
+* Basic Functionality Map: 
+![Image](static/images/crud-map.png)
 
 ## Surface
 
@@ -93,6 +94,10 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Icons were used to aid visual user navigation and make forms as intuitive as possible. All icons are provided by Font Awesome.
 
 ## Features
+The site allows users to add new reviews and edit their existing ones. Users can search for games by name or description. Users can browse games ranked by rating, and can use 'Buy' buttons to purchase games they are interested in. 
+
+### Existing Features
+
 #### Navbar
 * I wanted users to easily be able to navigate the site from every page.
 * The navbar resizes responsively into a toggle button at smaller screen sizes, to enable users to still navigate their way around the site.
@@ -105,8 +110,8 @@ The website is split into four main sections - a home (landing) page, a games ca
 
 #### Games
 * Lists games in order of average user rating, so users can easily see which games have highest ratings.
-* 'Buy' button for each game links to external affiliate link 
-* 'Add Review' button allows users to quickly and easily add reviews for games directly from Games page
+* 'Buy' button for each game links to external affiliate link .
+* 'Add Review' button allows users to quickly and easily add reviews for games directly from Games page.
 * 'Edit Game' button for 'admin' users to quickly and easily update games in the database.
 
 #### Individual Games Pages
@@ -122,14 +127,16 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Allows 'admin' users to add new games to the database.
 
 #### Footer
-* Provide links to social media with handy icons for easy navigation
-
-
-### Existing Features
-
+* Provide links to social media with handy icons for easy navigation.
 
 ### Features Left to Implement
 
+* Ability for users to rate games without adding reviews.
+* Allow users to save games to their own collection on their profile.
+* Ability to allow users to create 'wishlists' of games they would like to own.
+* A custom 404 error page with suggestions to help users find content if url is mis-linked/typed.
+* Allow reordering of games catalogue by title (alphabetical) or user rating, as well as default average rating.
+* Allow user to edit profile to change username or password
 
 ## Technologies Used
 
