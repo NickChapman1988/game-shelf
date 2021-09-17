@@ -60,32 +60,32 @@ Google Chrome's <b>lighthouse</b> was also run and provided the following report
 
 Home page
 
-- [Mobile](static/images/lighthouse/lighthouse-home-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-home.png)
+- [Mobile](static/images/lighthouse/lighthouse-home-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-home.jpg)
 
 login page
 
-- [Mobile](static/images/lighthouse/lighthouse-login-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-login.png)
+- [Mobile](static/images/lighthouse/lighthouse-login-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-login.jpg)
 
 register page
-- [Mobile](static/images/lighthouse/lighthouse-register-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-register.png)
+- [Mobile](static/images/lighthouse/lighthouse-register-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-register.jpg)
 
 games page
 
-- [Mobile](static/images/lighthouse/lighthouse-games-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-games.png)
+- [Mobile](static/images/lighthouse/lighthouse-games-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-games.jpg)
 
 individual game page
 
-- [Mobile](static/images/lighthouse/lighthouse-ind-game-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-ind-game.png)
+- [Mobile](static/images/lighthouse/lighthouse-ind-game-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-ind-game.jpg)
 
 profile page
 
-- [Mobile](static/images/lighthouse/lighthouse-profile-mob.png)
-- [Desktop](static/images/lighthouse/lighthouse-profile.png)
+- [Mobile](static/images/lighthouse/lighthouse-profile-mob.jpg)
+- [Desktop](static/images/lighthouse/lighthouse-profile.jpg)
 
 about page
 

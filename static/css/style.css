@@ -50,6 +50,14 @@ main {
     margin: 5px;
 }
 
+.btn-large {
+    padding: 0 20px;
+}
+
+.card-panel {
+    padding: 10px;
+}
+
 /* Icon Grow adapted from Hover.CSS by Ian Lunn https://ianlunn.github.io/Hover/*/
 .hvr-icon-grow {
     display: inline-block;
@@ -169,6 +177,7 @@ main {
     background: url("../images/pencils.jpg") no-repeat center bottom fixed;
     background-size: 100%; 
     object-fit: cover; 
+    margin-top: 25px;
 }
 
 #social-links li {
