@@ -35,24 +35,25 @@
                                 <p class="game-description">{{ game.game_description }}</p>
                             </td>
                             {% if session.user %}
-                                <td class="center-align">--</td>
+                                <td class="center-align">{{ game.game_rating }}</td>
                             {% endif %}
                             {% if game.average_rating != 0 %}
                                 <td class="center-align">{{ game.average_rating }}</td>
                             {% else %}
                                 <td class="center-align">--</td>
-                            {% endif %}
+                            {% endif %}    
                             <td>
-                                <a href="{{ game.shop_link }}" target="_blank" class="btn-small light-green darken-3">Buy</a>
+                                <a href="{{ game.shop_link }}" target="_blank" class="btn-small buy-button" rel="noopener">Buy</a>
                                 <!-- Only allow registered users to review -->
                                 {% if session.user %}
-                                    <a href="{{ url_for('add_review') }}" class="btn-small purple lighten-2">Review</a>
+                                    {% if game.game_rating == "--" %}
+                                        <a href="{{ url_for('add_review') }}" class="btn-small purple">Review</a>
+                                    {% endif %}
                                 {% endif %}
-        
                                 {% if session.user|lower == "admin"|lower %}
-                                    <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small blue darken-3">Edit Game</a>
+                                    <a href="{{ url_for('edit_game', game_id=game._id) }}" class="btn-small black-text blue lighten-3">Edit Game</a>
                                 {% endif %}
-                            </td>    
+                            </td>        
                         </tr>
                         
                     {% endfor %}     

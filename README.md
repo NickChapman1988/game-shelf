@@ -6,6 +6,10 @@ Game Shelf is a site that hopes to provide easily accessible reviews and details
 
 ### [See live site.](https://nick-game-shelf.herokuapp.com/)
 
+Assessor login credentials:
+- Username: Admin
+- Password: Asrai0409
+
 ## Table of Contents
 
 > -	[Overview](#overview)
@@ -96,7 +100,7 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Icons were used to aid visual user navigation and make forms as intuitive as possible. All icons are provided by Font Awesome.
 
 ## Features
-The site allows users to add new reviews and edit their existing ones. Users can search for games by name or description. Users can browse games ranked by rating, and can use 'Buy' buttons to purchase games they are interested in. 
+The site allows users to add new reviews and edit or delete their existing reviews. Users can search for games by name or description. Users can browse games ranked by rating, and can use 'Buy' buttons to purchase games they are interested in. 
 
 ### Existing Features
 
@@ -152,7 +156,7 @@ The site allows users to add new reviews and edit their existing ones. Users can
 * [MongoDB](https://en.wikipedia.org/wiki/MongoDB)
 
 #### Libraries & Frameworks:
-* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework))
+* [Flask](https://en.wikipedia.org/wiki/Flask_(web_framework)) 
 * [Balsamiq](https://balsamiq.com/) - Used for the creation of wireframes.
 * [FontAwesome](https://fontawesome.com/) - Used for all form icons, as well as search bar and menu toggle icons.
 * [Lucid](https://lucid.co/) - Used to map out user interaction and CRUD functionality. 
@@ -275,7 +279,7 @@ From the MongoDB CLI:
 `db.<collection>.createIndex({<fields>:<type>}{<options>})`
 
 ## Credits
-* Header images are by [Ross Connell](https://www.moregamesplease.com/), used with permission. 
+* Header images and 'About' page images are by [Ross Connell](https://www.moregamesplease.com/), used with permission. 
 * Footer image 'colored pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 * Horizontal scrolling added to games catalogue table thanks to [this answer](https://stackoverflow.com/a/30423904) from Serge Stroobandt on Stack Overflow.
 * Pagination on Games page adapted from [this demo](https://gist.github.com/mozillazg/69fb40067ae6d80386e10e105e6803c9) by Huang Huang on GitHub. Thanks to Krisztina Sarolta Szabo on Slack for the link.

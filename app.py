@@ -88,6 +88,18 @@ def search():
         {"$text": {"$search": query}}).sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
 
+    if 'user' in session:
+        reviews = mongo.db.reviews.find({"username": session["user"]})
+
+        for review in reviews:
+            for index, game in enumerate(catalogue):
+                if game['game_title'] == review['game_title']:
+                    catalogue[index]['game_rating'] = review['game_rating']
+
+        for index, game in enumerate(catalogue):
+            if game.get('game_rating') is None:
+                catalogue[index]['game_rating'] = "--"
+
     return render_template(
         "search.html", catalogue=catalogue, latest_reviews=latest_reviews,
         query=query)
@@ -100,6 +112,18 @@ def search_mobile():
     catalogue = list(mongo.db.catalogue.find(
         {"$text": {"$search": query}}).sort("average_rating", -1))
     latest_reviews = mongo.db.reviews.find().sort("date_created", -1).limit(4)
+
+    if 'user' in session:
+        reviews = mongo.db.reviews.find({"username": session["user"]})
+
+        for review in reviews:
+            for index, game in enumerate(catalogue):
+                if game['game_title'] == review['game_title']:
+                    catalogue[index]['game_rating'] = review['game_rating']
+
+        for index, game in enumerate(catalogue):
+            if game.get('game_rating') is None:
+                catalogue[index]['game_rating'] = "--"
 
     return render_template(
         "search.html", catalogue=catalogue, latest_reviews=latest_reviews,

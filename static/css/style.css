@@ -247,17 +247,17 @@ main {
 #rating-box, #user-rating-box {
     height: 65px;
     width: 65px;
-    background-color: #558b2f;
+    background-color: #4C7A2A;
     border-radius: 50%;
     margin: 2px;
 }
 
 #user-rating-box {
-    background-color: #ba68c8;
+    background-color: #9C27B0;
 }
 
 #rating-box p, #user-rating-box p {
-    line-height: 20px;
+    line-height: 16px;
     font-size: 25px;
     color: white;
     font-weight: 700;

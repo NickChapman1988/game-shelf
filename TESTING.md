@@ -274,6 +274,7 @@ In order to fix this, I introduced an additional first 'if' condition to check w
 ![Image](static/images/no-rating-error.png)
 
 * While generating Lighthouse reports during testing, Accessibility scores were affected by the navbar search box and toggler search box sharing the same ID. 
+
 ![Image](static/images/aria-id.png)
 
 As this could potentially effect user experience on screen readers and prevent users accessing the search functionality, I renamed the toggler search element and rerouted the python function to generate the same template as the desktop search.
