@@ -89,7 +89,7 @@
                 {% if existing_review == 1 %}
                     <!-- Display to registered users without review -->
                     <div class="col s6 m4">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large buy-button" rel="noopener">Buy</a>
                     </div>                
                     <div class="col s6 m4">
                         <a href="{{ url_for('add_review') }}" class="btn-large purple">Review</a>
@@ -102,7 +102,7 @@
                 {% else %}
                     <!-- Display to registered users with review -->
                     <div class="col s6">
-                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
+                        <a href="{{ game.shop_link }}" target="_blank" class="btn-large buy-button" rel="noopener">Buy</a>
                     </div>
                     {% if session.user|lower == "admin"|lower %}
                     <div class="col s6">
@@ -113,7 +113,7 @@
             {% else %}
                 <!-- Display to unregistered users -->                
                 <div class="col s6 push-s3">
-                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large light-green darken-3" rel="noopener">Buy</a>
+                    <a href="{{ game.shop_link }}" target="_blank" class="btn-large buy-button" rel="noopener">Buy</a>
                 </div>
             {% endif %}
         </div>

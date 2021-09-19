@@ -47,7 +47,7 @@
                                 <td class="center-align">--</td>
                             {% endif %}    
                             <td>
-                                <a href="{{ game.shop_link }}" target="_blank" class="btn-small light-green darken-3" rel="noopener">Buy</a>
+                                <a href="{{ game.shop_link }}" target="_blank" class="btn-small buy-button" rel="noopener">Buy</a>
                                 <!-- Only allow registered users to review -->
                                 {% if session.user %}
                                     {% if game.game_rating == "--" %}

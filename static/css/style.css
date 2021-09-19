@@ -55,6 +55,10 @@ main {
     padding: 0 20px;
 }
 
+.buy-button {
+    background-color: #4C7A2A;
+}
+
 .card-panel {
     padding: 10px;
 }

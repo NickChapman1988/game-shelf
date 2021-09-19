@@ -51,7 +51,7 @@ Tabletop gaming is taking the world by storm right now, and the board games indu
 
 ## Structure
 
-The website is split into four main sections - a home (landing) page, a games catalogue page, an about page and user profile page. The fixed navbar allows the user to easily navigate the site, and presents a consistent layout, while the toggle feature makes the navbar more accessible for mobile and tablet devices whilst maintaining consistent positioning. The Home page displays a prominent header image and site message, with further information accessible on the About page. The Games page is clean and simple, ranking the games based on average user rating. Each game on the Games page links to individual games pages with additional information on each game. The About page provides users an easy way to give feedback and contact the site owner. The Profile page contains the primary CRUD functionality, with users able to add, read, edit and delete their own reviews for games. 
+The website is split into four main sections - a home (landing) page, a games catalogue page, an about page and user profile page. The fixed navbar allows the user to easily navigate the site, and presents a consistent layout, while the toggle feature makes the navbar more accessible for mobile and tablet devices whilst maintaining consistent positioning. The Home page displays a prominent header image and site message, with further information accessible on the About page. The Games page is clean and simple, ranking the games based on average user rating. Each game on the Games page links to individual games pages with additional information on each game. The About page provides users with further information on how to use the site. The Profile page contains the primary CRUD functionality, with users able to add, read, edit and delete their own reviews for games. Users can also add reviews from the Games page and individual game pages.
 
 ## Skeleton
 
@@ -62,12 +62,13 @@ The website is split into four main sections - a home (landing) page, a games ca
 * Profile Page: <a href="static/docs/wireframes/profile.pdf" target="_blank">Profile</a>
 
 * Basic Functionality Map: 
+
 ![Image](static/images/crud-map.png)
 
 ## Surface
 
 ### Images
-* Header images are by [Ross Connell](https://www.moregamesplease.com/) for premium, professional board game photography. 
+* Header images and 'About' page images are by [Ross Connell](https://www.moregamesplease.com/) for premium, professional board game photography. 
 * Footer image is 'Coloured Pencils' by [Jess Bailey](https://unsplash.com/@jessbaileydesigns?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 ### Colours
@@ -79,12 +80,12 @@ The website is split into four main sections - a home (landing) page, a games ca
 * White (#FFFFFF) - Main background colour
 * Black (#000000) - Main text colour
 
-* The site features several different button types for different functions, so it was important to differentiate these with different colours. 'Buy' buttons were coloured with 'Maximum Green' (#558B2F) to convey a 'positive' impression and encourage clicks. 'Fuchsia Crystal' (#BA68C8) was used for Add/Edit Review buttons to stand out from the 'Buy' buttons while also tying in with the main site purple colour. 'Ruby' (#D81B60) was used for 'Delete' buttons to convey a user warning. 'Light Sky Blue' (#90CAF9) was used for Add/Edit Game buttons to differentiate from the 'Review' buttons
+* The site features several different button types for different functions, so it was important to differentiate these with different colours. 'Buy' buttons were coloured with 'Sap Green' (#4C7A2A) to convey a 'positive' impression and encourage clicks. 'Purple Munsell' (#9C27B0) was used for Add/Edit Review buttons to stand out from the 'Buy' buttons while also tying in with the main site purple colour. 'Ruby' (#D81B60) was used for 'Delete' buttons to convey a user warning. 'Light Sky Blue' (#90CAF9) was used for Add/Edit Game buttons to differentiate from the 'Review' buttons
 
-![Image](static/images/buttons.png)
+![Image](static/images/buttons.jpg)
 
-* Maximum Green #558B2F
-* Fuchsia Crystal #BA68C8
+* Sap Green #4C7A2A
+* Purple Munsell #9C27B0
 * Ruby #D81B60
 * Light Sky Blue #90CAF9
 
