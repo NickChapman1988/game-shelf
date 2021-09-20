@@ -69,6 +69,10 @@ The website is split into four main sections - a home (landing) page, a games ca
 
 ![Image](static/images/crud-map.png)
 
+* Database:
+
+![Image](static/images/database.png)
+
 ## Surface
 
 ### Images
