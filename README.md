@@ -4,7 +4,7 @@ Game Shelf is a site that hopes to provide easily accessible reviews and details
 
 ![Image](static/images/home-screenshot.png)
 
-### [See live site.](https://nick-game-shelf.herokuapp.com/)
+### [See live site.](https://game-shelf-ms3.onrender.com/)
 
 Assessor login credentials:
 - Username: Admin
